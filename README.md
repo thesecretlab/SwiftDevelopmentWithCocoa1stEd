@@ -1,6 +1,8 @@
-# Swift Development with Cocoa First Edition
+# Swift Development with Cocoa
 
 Code from [Secret Lab](http://www.secretlab.com.au)'s book, [Swift Development with Cocoa First Edition](http://shop.oreilly.com/product/0636920034285.do).
+
+Swift Development with Cocoa was written by [Jon Manning](http://twitter.com/desplesda), [Paris Buttfield-Addison](http://www.paris.id.au), and [Tim Nugent](http://lonely.coffee).
 
 You can email us at [lab@secretlab.com.au](mailto:lab@secretlab.com.au)
 

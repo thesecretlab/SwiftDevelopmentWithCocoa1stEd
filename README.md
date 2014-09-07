@@ -1,6 +1,6 @@
 # Swift Development with Cocoa
 
-![Swift Development with Cocoa](http://f.cl.ly/items/0a0K312x1s1b2p3f2l3G/swift1sted.gif)
+[![Swift Development with Cocoa](http://f.cl.ly/items/0a0K312x1s1b2p3f2l3G/swift1sted.gif)](http://www.secretlab.com.au/books)
 
 Code from [Secret Lab](http://www.secretlab.com.au)'s book, [Swift Development with Cocoa First Edition](http://shop.oreilly.com/product/0636920034285.do).
 

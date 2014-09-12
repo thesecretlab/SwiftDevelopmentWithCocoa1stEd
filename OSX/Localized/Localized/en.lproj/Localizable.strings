@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Localized
+
+  Created by Jon Manning on 30/07/2014.
+  Copyright (c) 2014 Secret Lab. All rights reserved.
+*/
+
+// BEGIN english_text
+"today's date: %@" = "Today's date is %@";
+// END english_text

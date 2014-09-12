@@ -1,0 +1,959 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		689F925719628A3C00146188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F925619628A3C00146188 /* AppDelegate.swift */; };
+		689F925919628A3C00146188 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F925819628A3C00146188 /* ViewController.swift */; };
+		689F925C19628A3C00146188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 689F925A19628A3C00146188 /* Main.storyboard */; };
+		689F925E19628A3C00146188 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 689F925D19628A3C00146188 /* Images.xcassets */; };
+		689F926A19628A3C00146188 /* MultipeerChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689F926919628A3C00146188 /* MultipeerChatTests.swift */; };
+		689F927219628A5900146188 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689F927119628A5900146188 /* MultipeerConnectivity.framework */; };
+		68DA395819627DEC00D21DE6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DA395719627DEC00D21DE6 /* main.swift */; };
+		68DA395A19627DEC00D21DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DA395919627DEC00D21DE6 /* AppDelegate.swift */; };
+		68DA395C19627DEC00D21DE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68DA395B19627DEC00D21DE6 /* Images.xcassets */; };
+		68DA395F19627DEC00D21DE6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68DA395D19627DEC00D21DE6 /* MainMenu.xib */; };
+		68DA396B19627DED00D21DE6 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DA396A19627DED00D21DE6 /* NetworkingTests.swift */; };
+		68DA397E196283F700D21DE6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DA397D196283F700D21DE6 /* main.swift */; };
+		68DA3980196283F700D21DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DA397F196283F700D21DE6 /* AppDelegate.swift */; };
+		68DA3982196283F700D21DE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68DA3981196283F700D21DE6 /* Images.xcassets */; };
+		68DA3985196283F700D21DE6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68DA3983196283F700D21DE6 /* MainMenu.xib */; };
+		68DA3991196283F800D21DE6 /* iTunesDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DA3990196283F800D21DE6 /* iTunesDetectorTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		689C4368196BAF44005B3CF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68DA394A19627DEC00D21DE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68DA3978196283F700D21DE6;
+			remoteInfo = iTunesDetector;
+		};
+		689C436A196BAF44005B3CF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68DA394A19627DEC00D21DE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68DA3978196283F700D21DE6;
+			remoteInfo = iTunesDetector;
+		};
+		689F926419628A3C00146188 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68DA394A19627DEC00D21DE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 689F925119628A3C00146188;
+			remoteInfo = MultipeerChat;
+		};
+		68DA396519627DED00D21DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68DA394A19627DEC00D21DE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68DA395119627DEC00D21DE6;
+			remoteInfo = Networking;
+		};
+		68DA398B196283F800D21DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68DA394A19627DEC00D21DE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68DA3978196283F700D21DE6;
+			remoteInfo = iTunesDetector;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		689F925219628A3C00146188 /* MultipeerChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipeerChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		689F925519628A3C00146188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689F925619628A3C00146188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		689F925819628A3C00146188 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		689F925B19628A3C00146188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		689F925D19628A3C00146188 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		689F926319628A3C00146188 /* MultipeerChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultipeerChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		689F926819628A3C00146188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689F926919628A3C00146188 /* MultipeerChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerChatTests.swift; sourceTree = "<group>"; };
+		689F927119628A5900146188 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		68DA395219627DEC00D21DE6 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68DA395619627DEC00D21DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68DA395719627DEC00D21DE6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		68DA395919627DEC00D21DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		68DA395B19627DEC00D21DE6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		68DA395E19627DEC00D21DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		68DA396419627DED00D21DE6 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68DA396919627DED00D21DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68DA396A19627DED00D21DE6 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		68DA397419627DFA00D21DE6 /* Networking.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Networking.playground; sourceTree = "<group>"; };
+		68DA3979196283F700D21DE6 /* iTunesDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68DA397C196283F700D21DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68DA397D196283F700D21DE6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		68DA397F196283F700D21DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		68DA3981196283F700D21DE6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		68DA3984196283F700D21DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		68DA398A196283F800D21DE6 /* iTunesDetectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesDetectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68DA398F196283F800D21DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68DA3990196283F800D21DE6 /* iTunesDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesDetectorTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		689F924F19628A3C00146188 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689F927219628A5900146188 /* MultipeerConnectivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689F926019628A3C00146188 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA394F19627DEC00D21DE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA396119627DED00D21DE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA3976196283F700D21DE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA3987196283F800D21DE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		689F925319628A3C00146188 /* MultipeerChat */ = {
+			isa = PBXGroup;
+			children = (
+				689F925619628A3C00146188 /* AppDelegate.swift */,
+				689F925819628A3C00146188 /* ViewController.swift */,
+				689F925A19628A3C00146188 /* Main.storyboard */,
+				689F925D19628A3C00146188 /* Images.xcassets */,
+				689F925419628A3C00146188 /* Supporting Files */,
+			);
+			path = MultipeerChat;
+			sourceTree = "<group>";
+		};
+		689F925419628A3C00146188 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				689F927119628A5900146188 /* MultipeerConnectivity.framework */,
+				689F925519628A3C00146188 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		689F926619628A3C00146188 /* MultipeerChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				689F926919628A3C00146188 /* MultipeerChatTests.swift */,
+				689F926719628A3C00146188 /* Supporting Files */,
+			);
+			path = MultipeerChatTests;
+			sourceTree = "<group>";
+		};
+		689F926719628A3C00146188 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				689F926819628A3C00146188 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68DA394919627DEC00D21DE6 = {
+			isa = PBXGroup;
+			children = (
+				68DA397419627DFA00D21DE6 /* Networking.playground */,
+				68DA395419627DEC00D21DE6 /* Networking */,
+				68DA396719627DED00D21DE6 /* NetworkingTests */,
+				68DA397A196283F700D21DE6 /* iTunesDetector */,
+				68DA398D196283F800D21DE6 /* iTunesDetectorTests */,
+				689F925319628A3C00146188 /* MultipeerChat */,
+				689F926619628A3C00146188 /* MultipeerChatTests */,
+				68DA395319627DEC00D21DE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68DA395319627DEC00D21DE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68DA395219627DEC00D21DE6 /* Networking.app */,
+				68DA396419627DED00D21DE6 /* NetworkingTests.xctest */,
+				68DA3979196283F700D21DE6 /* iTunesDetector.app */,
+				68DA398A196283F800D21DE6 /* iTunesDetectorTests.xctest */,
+				689F925219628A3C00146188 /* MultipeerChat.app */,
+				689F926319628A3C00146188 /* MultipeerChatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68DA395419627DEC00D21DE6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				68DA395919627DEC00D21DE6 /* AppDelegate.swift */,
+				68DA395B19627DEC00D21DE6 /* Images.xcassets */,
+				68DA395D19627DEC00D21DE6 /* MainMenu.xib */,
+				68DA395519627DEC00D21DE6 /* Supporting Files */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		68DA395519627DEC00D21DE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68DA395619627DEC00D21DE6 /* Info.plist */,
+				68DA395719627DEC00D21DE6 /* main.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68DA396719627DED00D21DE6 /* NetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				68DA396A19627DED00D21DE6 /* NetworkingTests.swift */,
+				68DA396819627DED00D21DE6 /* Supporting Files */,
+			);
+			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
+		68DA396819627DED00D21DE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68DA396919627DED00D21DE6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68DA397A196283F700D21DE6 /* iTunesDetector */ = {
+			isa = PBXGroup;
+			children = (
+				68DA397F196283F700D21DE6 /* AppDelegate.swift */,
+				68DA3981196283F700D21DE6 /* Images.xcassets */,
+				68DA3983196283F700D21DE6 /* MainMenu.xib */,
+				68DA397B196283F700D21DE6 /* Supporting Files */,
+			);
+			path = iTunesDetector;
+			sourceTree = "<group>";
+		};
+		68DA397B196283F700D21DE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68DA397C196283F700D21DE6 /* Info.plist */,
+				68DA397D196283F700D21DE6 /* main.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68DA398D196283F800D21DE6 /* iTunesDetectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				68DA3990196283F800D21DE6 /* iTunesDetectorTests.swift */,
+				68DA398E196283F800D21DE6 /* Supporting Files */,
+			);
+			path = iTunesDetectorTests;
+			sourceTree = "<group>";
+		};
+		68DA398E196283F800D21DE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68DA398F196283F800D21DE6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		689F925119628A3C00146188 /* MultipeerChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 689F926F19628A3C00146188 /* Build configuration list for PBXNativeTarget "MultipeerChat" */;
+			buildPhases = (
+				689F924E19628A3C00146188 /* Sources */,
+				689F924F19628A3C00146188 /* Frameworks */,
+				689F925019628A3C00146188 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultipeerChat;
+			productName = MultipeerChat;
+			productReference = 689F925219628A3C00146188 /* MultipeerChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		689F926219628A3C00146188 /* MultipeerChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 689F927019628A3C00146188 /* Build configuration list for PBXNativeTarget "MultipeerChatTests" */;
+			buildPhases = (
+				689F925F19628A3C00146188 /* Sources */,
+				689F926019628A3C00146188 /* Frameworks */,
+				689F926119628A3C00146188 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				689F926519628A3C00146188 /* PBXTargetDependency */,
+			);
+			name = MultipeerChatTests;
+			productName = MultipeerChatTests;
+			productReference = 689F926319628A3C00146188 /* MultipeerChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		68DA395119627DEC00D21DE6 /* Networking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68DA396E19627DED00D21DE6 /* Build configuration list for PBXNativeTarget "Networking" */;
+			buildPhases = (
+				68DA394E19627DEC00D21DE6 /* Sources */,
+				68DA394F19627DEC00D21DE6 /* Frameworks */,
+				68DA395019627DEC00D21DE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Networking;
+			productName = Networking;
+			productReference = 68DA395219627DEC00D21DE6 /* Networking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		68DA396319627DED00D21DE6 /* NetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68DA397119627DED00D21DE6 /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
+			buildPhases = (
+				68DA396019627DED00D21DE6 /* Sources */,
+				68DA396119627DED00D21DE6 /* Frameworks */,
+				68DA396219627DED00D21DE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68DA396619627DED00D21DE6 /* PBXTargetDependency */,
+			);
+			name = NetworkingTests;
+			productName = NetworkingTests;
+			productReference = 68DA396419627DED00D21DE6 /* NetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		68DA3978196283F700D21DE6 /* iTunesDetector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68DA3992196283F800D21DE6 /* Build configuration list for PBXNativeTarget "iTunesDetector" */;
+			buildPhases = (
+				68DA3975196283F700D21DE6 /* Sources */,
+				68DA3976196283F700D21DE6 /* Frameworks */,
+				68DA3977196283F700D21DE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iTunesDetector;
+			productName = iTunesDetector;
+			productReference = 68DA3979196283F700D21DE6 /* iTunesDetector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		68DA3989196283F800D21DE6 /* iTunesDetectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68DA3995196283F800D21DE6 /* Build configuration list for PBXNativeTarget "iTunesDetectorTests" */;
+			buildPhases = (
+				68DA3986196283F800D21DE6 /* Sources */,
+				68DA3987196283F800D21DE6 /* Frameworks */,
+				68DA3988196283F800D21DE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68DA398C196283F800D21DE6 /* PBXTargetDependency */,
+				689C4369196BAF44005B3CF3 /* PBXTargetDependency */,
+				689C436B196BAF44005B3CF3 /* PBXTargetDependency */,
+			);
+			name = iTunesDetectorTests;
+			productName = iTunesDetectorTests;
+			productReference = 68DA398A196283F800D21DE6 /* iTunesDetectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68DA394A19627DEC00D21DE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Secret Lab";
+				TargetAttributes = {
+					689F925119628A3C00146188 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 5V2A4389PA;
+					};
+					689F926219628A3C00146188 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 689F925119628A3C00146188;
+					};
+					68DA395119627DEC00D21DE6 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					68DA396319627DED00D21DE6 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 68DA395119627DEC00D21DE6;
+					};
+					68DA3978196283F700D21DE6 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					68DA3989196283F800D21DE6 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 68DA3978196283F700D21DE6;
+					};
+				};
+			};
+			buildConfigurationList = 68DA394D19627DEC00D21DE6 /* Build configuration list for PBXProject "Networking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68DA394919627DEC00D21DE6;
+			productRefGroup = 68DA395319627DEC00D21DE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68DA395119627DEC00D21DE6 /* Networking */,
+				68DA396319627DED00D21DE6 /* NetworkingTests */,
+				68DA3978196283F700D21DE6 /* iTunesDetector */,
+				68DA3989196283F800D21DE6 /* iTunesDetectorTests */,
+				689F925119628A3C00146188 /* MultipeerChat */,
+				689F926219628A3C00146188 /* MultipeerChatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		689F925019628A3C00146188 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689F925C19628A3C00146188 /* Main.storyboard in Resources */,
+				689F925E19628A3C00146188 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689F926119628A3C00146188 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA395019627DEC00D21DE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68DA395C19627DEC00D21DE6 /* Images.xcassets in Resources */,
+				68DA395F19627DEC00D21DE6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA396219627DED00D21DE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA3977196283F700D21DE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68DA3982196283F700D21DE6 /* Images.xcassets in Resources */,
+				68DA3985196283F700D21DE6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA3988196283F800D21DE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		689F924E19628A3C00146188 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689F925919628A3C00146188 /* ViewController.swift in Sources */,
+				689F925719628A3C00146188 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689F925F19628A3C00146188 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689F926A19628A3C00146188 /* MultipeerChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA394E19627DEC00D21DE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68DA395A19627DEC00D21DE6 /* AppDelegate.swift in Sources */,
+				68DA395819627DEC00D21DE6 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA396019627DED00D21DE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68DA396B19627DED00D21DE6 /* NetworkingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA3975196283F700D21DE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68DA3980196283F700D21DE6 /* AppDelegate.swift in Sources */,
+				68DA397E196283F700D21DE6 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DA3986196283F800D21DE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68DA3991196283F800D21DE6 /* iTunesDetectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		689C4369196BAF44005B3CF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68DA3978196283F700D21DE6 /* iTunesDetector */;
+			targetProxy = 689C4368196BAF44005B3CF3 /* PBXContainerItemProxy */;
+		};
+		689C436B196BAF44005B3CF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68DA3978196283F700D21DE6 /* iTunesDetector */;
+			targetProxy = 689C436A196BAF44005B3CF3 /* PBXContainerItemProxy */;
+		};
+		689F926519628A3C00146188 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 689F925119628A3C00146188 /* MultipeerChat */;
+			targetProxy = 689F926419628A3C00146188 /* PBXContainerItemProxy */;
+		};
+		68DA396619627DED00D21DE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68DA395119627DEC00D21DE6 /* Networking */;
+			targetProxy = 68DA396519627DED00D21DE6 /* PBXContainerItemProxy */;
+		};
+		68DA398C196283F800D21DE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68DA3978196283F700D21DE6 /* iTunesDetector */;
+			targetProxy = 68DA398B196283F800D21DE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		689F925A19628A3C00146188 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				689F925B19628A3C00146188 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		68DA395D19627DEC00D21DE6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68DA395E19627DEC00D21DE6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		68DA3983196283F700D21DE6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68DA3984196283F700D21DE6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		689F926B19628A3C00146188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MultipeerChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		689F926C19628A3C00146188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MultipeerChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		689F926D19628A3C00146188 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MultipeerChat.app/MultipeerChat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MultipeerChatTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		689F926E19628A3C00146188 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MultipeerChat.app/MultipeerChat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MultipeerChatTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68DA396C19627DED00D21DE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		68DA396D19627DED00D21DE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		68DA396F19627DED00D21DE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Networking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		68DA397019627DED00D21DE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Networking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		68DA397219627DED00D21DE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Networking.app/Contents/MacOS/Networking";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		68DA397319627DED00D21DE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Networking.app/Contents/MacOS/Networking";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		68DA3993196283F800D21DE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iTunesDetector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		68DA3994196283F800D21DE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = iTunesDetector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		68DA3996196283F800D21DE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iTunesDetector.app/Contents/MacOS/iTunesDetector";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iTunesDetectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		68DA3997196283F800D21DE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iTunesDetector.app/Contents/MacOS/iTunesDetector";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iTunesDetectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		689F926F19628A3C00146188 /* Build configuration list for PBXNativeTarget "MultipeerChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689F926B19628A3C00146188 /* Debug */,
+				689F926C19628A3C00146188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		689F927019628A3C00146188 /* Build configuration list for PBXNativeTarget "MultipeerChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689F926D19628A3C00146188 /* Debug */,
+				689F926E19628A3C00146188 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68DA394D19627DEC00D21DE6 /* Build configuration list for PBXProject "Networking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68DA396C19627DED00D21DE6 /* Debug */,
+				68DA396D19627DED00D21DE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68DA396E19627DED00D21DE6 /* Build configuration list for PBXNativeTarget "Networking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68DA396F19627DED00D21DE6 /* Debug */,
+				68DA397019627DED00D21DE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68DA397119627DED00D21DE6 /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68DA397219627DED00D21DE6 /* Debug */,
+				68DA397319627DED00D21DE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68DA3992196283F800D21DE6 /* Build configuration list for PBXNativeTarget "iTunesDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68DA3993196283F800D21DE6 /* Debug */,
+				68DA3994196283F800D21DE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68DA3995196283F800D21DE6 /* Build configuration list for PBXNativeTarget "iTunesDetectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68DA3996196283F800D21DE6 /* Debug */,
+				68DA3997196283F800D21DE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68DA394A19627DEC00D21DE6 /* Project object */;
+}

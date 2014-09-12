@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="iOSSharing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IwR-rS-ejo">
+                                <rect key="frame" x="140" y="25" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hG2-rp-Bn2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="krF-qO-qZf"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoR-F0-Ft3">
+                                <rect key="frame" x="204" y="63" width="73" height="30"/>
+                                <state key="normal" title="Share Text">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareText:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gxh-VF-QjM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageToShare" translatesAutoresizingMaskIntoConstraints="NO" id="hnu-h4-fxm">
+                                <rect key="frame" x="140" y="101" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hnu-h4-fxm" secondAttribute="height" multiplier="1:1" id="dgn-JD-98Y"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2F-jI-9QB">
+                                <rect key="frame" x="196.5" y="309" width="87" height="30"/>
+                                <state key="normal" title="Share Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareImage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FV5-KT-z0e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hnu-h4-fxm" firstAttribute="centerX" secondItem="DoR-F0-Ft3" secondAttribute="centerX" id="38c-YF-kH4"/>
+                            <constraint firstItem="DoR-F0-Ft3" firstAttribute="top" secondItem="IwR-rS-ejo" secondAttribute="bottom" constant="8" id="Bbp-6i-7R1"/>
+                            <constraint firstItem="l2F-jI-9QB" firstAttribute="top" secondItem="hnu-h4-fxm" secondAttribute="bottom" constant="8" symbolic="YES" id="J6j-b0-it0"/>
+                            <constraint firstItem="hnu-h4-fxm" firstAttribute="centerX" secondItem="l2F-jI-9QB" secondAttribute="centerX" id="UWk-5M-CHT"/>
+                            <constraint firstItem="hnu-h4-fxm" firstAttribute="width" secondItem="IwR-rS-ejo" secondAttribute="width" id="Uxd-tS-1Pb"/>
+                            <constraint firstItem="hnu-h4-fxm" firstAttribute="top" secondItem="DoR-F0-Ft3" secondAttribute="bottom" constant="8" id="eeX-Lc-a6L"/>
+                            <constraint firstAttribute="centerY" secondItem="IwR-rS-ejo" secondAttribute="centerY" constant="200" id="mPw-68-N0B"/>
+                            <constraint firstAttribute="centerX" secondItem="IwR-rS-ejo" secondAttribute="centerX" id="voC-9w-smz"/>
+                            <constraint firstItem="DoR-F0-Ft3" firstAttribute="centerX" secondItem="IwR-rS-ejo" secondAttribute="centerX" constant="0.5" id="zv2-95-aqt"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="hnu-h4-fxm" id="LBk-fl-NEY"/>
+                        <outlet property="textView" destination="IwR-rS-ejo" id="nK2-Wn-EXc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ImageToShare" width="500" height="500"/>
+    </resources>
+</document>

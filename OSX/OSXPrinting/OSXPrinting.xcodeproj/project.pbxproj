@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		339740A619AB29EC00B653D8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339740A519AB29EC00B653D8 /* main.swift */; };
+		339740A819AB29EC00B653D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339740A719AB29EC00B653D8 /* AppDelegate.swift */; };
+		339740AA19AB29EC00B653D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339740A919AB29EC00B653D8 /* Images.xcassets */; };
+		339740AD19AB29EC00B653D8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339740AB19AB29EC00B653D8 /* MainMenu.xib */; };
+		339740B919AB29EC00B653D8 /* OSXPrintingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339740B819AB29EC00B653D8 /* OSXPrintingTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		339740B319AB29EC00B653D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3397409819AB29EC00B653D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3397409F19AB29EC00B653D8;
+			remoteInfo = OSXPrinting;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		339740A019AB29EC00B653D8 /* OSXPrinting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSXPrinting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		339740A419AB29EC00B653D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		339740A519AB29EC00B653D8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		339740A719AB29EC00B653D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		339740A919AB29EC00B653D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		339740AC19AB29EC00B653D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		339740B219AB29EC00B653D8 /* OSXPrintingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSXPrintingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		339740B719AB29EC00B653D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		339740B819AB29EC00B653D8 /* OSXPrintingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSXPrintingTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3397409D19AB29EC00B653D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		339740AF19AB29EC00B653D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3397409719AB29EC00B653D8 = {
+			isa = PBXGroup;
+			children = (
+				339740A219AB29EC00B653D8 /* OSXPrinting */,
+				339740B519AB29EC00B653D8 /* OSXPrintingTests */,
+				339740A119AB29EC00B653D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		339740A119AB29EC00B653D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				339740A019AB29EC00B653D8 /* OSXPrinting.app */,
+				339740B219AB29EC00B653D8 /* OSXPrintingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		339740A219AB29EC00B653D8 /* OSXPrinting */ = {
+			isa = PBXGroup;
+			children = (
+				339740A719AB29EC00B653D8 /* AppDelegate.swift */,
+				339740A919AB29EC00B653D8 /* Images.xcassets */,
+				339740AB19AB29EC00B653D8 /* MainMenu.xib */,
+				339740A319AB29EC00B653D8 /* Supporting Files */,
+			);
+			path = OSXPrinting;
+			sourceTree = "<group>";
+		};
+		339740A319AB29EC00B653D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				339740A419AB29EC00B653D8 /* Info.plist */,
+				339740A519AB29EC00B653D8 /* main.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		339740B519AB29EC00B653D8 /* OSXPrintingTests */ = {
+			isa = PBXGroup;
+			children = (
+				339740B819AB29EC00B653D8 /* OSXPrintingTests.swift */,
+				339740B619AB29EC00B653D8 /* Supporting Files */,
+			);
+			path = OSXPrintingTests;
+			sourceTree = "<group>";
+		};
+		339740B619AB29EC00B653D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				339740B719AB29EC00B653D8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3397409F19AB29EC00B653D8 /* OSXPrinting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 339740BC19AB29EC00B653D8 /* Build configuration list for PBXNativeTarget "OSXPrinting" */;
+			buildPhases = (
+				3397409C19AB29EC00B653D8 /* Sources */,
+				3397409D19AB29EC00B653D8 /* Frameworks */,
+				3397409E19AB29EC00B653D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSXPrinting;
+			productName = OSXPrinting;
+			productReference = 339740A019AB29EC00B653D8 /* OSXPrinting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		339740B119AB29EC00B653D8 /* OSXPrintingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 339740BF19AB29EC00B653D8 /* Build configuration list for PBXNativeTarget "OSXPrintingTests" */;
+			buildPhases = (
+				339740AE19AB29EC00B653D8 /* Sources */,
+				339740AF19AB29EC00B653D8 /* Frameworks */,
+				339740B019AB29EC00B653D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				339740B419AB29EC00B653D8 /* PBXTargetDependency */,
+			);
+			name = OSXPrintingTests;
+			productName = OSXPrintingTests;
+			productReference = 339740B219AB29EC00B653D8 /* OSXPrintingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3397409819AB29EC00B653D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Timothy Rodney Nugent";
+				TargetAttributes = {
+					3397409F19AB29EC00B653D8 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					339740B119AB29EC00B653D8 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 3397409F19AB29EC00B653D8;
+					};
+				};
+			};
+			buildConfigurationList = 3397409B19AB29EC00B653D8 /* Build configuration list for PBXProject "OSXPrinting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3397409719AB29EC00B653D8;
+			productRefGroup = 339740A119AB29EC00B653D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3397409F19AB29EC00B653D8 /* OSXPrinting */,
+				339740B119AB29EC00B653D8 /* OSXPrintingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3397409E19AB29EC00B653D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				339740AA19AB29EC00B653D8 /* Images.xcassets in Resources */,
+				339740AD19AB29EC00B653D8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		339740B019AB29EC00B653D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3397409C19AB29EC00B653D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				339740A819AB29EC00B653D8 /* AppDelegate.swift in Sources */,
+				339740A619AB29EC00B653D8 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		339740AE19AB29EC00B653D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				339740B919AB29EC00B653D8 /* OSXPrintingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		339740B419AB29EC00B653D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3397409F19AB29EC00B653D8 /* OSXPrinting */;
+			targetProxy = 339740B319AB29EC00B653D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		339740AB19AB29EC00B653D8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				339740AC19AB29EC00B653D8 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		339740BA19AB29EC00B653D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		339740BB19AB29EC00B653D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		339740BD19AB29EC00B653D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OSXPrinting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		339740BE19AB29EC00B653D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OSXPrinting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		339740C019AB29EC00B653D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OSXPrintingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSXPrinting.app/Contents/MacOS/OSXPrinting";
+			};
+			name = Debug;
+		};
+		339740C119AB29EC00B653D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OSXPrintingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSXPrinting.app/Contents/MacOS/OSXPrinting";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3397409B19AB29EC00B653D8 /* Build configuration list for PBXProject "OSXPrinting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				339740BA19AB29EC00B653D8 /* Debug */,
+				339740BB19AB29EC00B653D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		339740BC19AB29EC00B653D8 /* Build configuration list for PBXNativeTarget "OSXPrinting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				339740BD19AB29EC00B653D8 /* Debug */,
+				339740BE19AB29EC00B653D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		339740BF19AB29EC00B653D8 /* Build configuration list for PBXNativeTarget "OSXPrintingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				339740C019AB29EC00B653D8 /* Debug */,
+				339740C119AB29EC00B653D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3397409819AB29EC00B653D8 /* Project object */;
+}

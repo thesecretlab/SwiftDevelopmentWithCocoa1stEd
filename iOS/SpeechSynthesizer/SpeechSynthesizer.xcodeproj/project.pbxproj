@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3333D53119AC900A008B534E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D53019AC900A008B534E /* AppDelegate.swift */; };
+		3333D53319AC900A008B534E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D53219AC900A008B534E /* ViewController.swift */; };
+		3333D53619AC900A008B534E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3333D53419AC900A008B534E /* Main.storyboard */; };
+		3333D53819AC900A008B534E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3333D53719AC900A008B534E /* Images.xcassets */; };
+		3333D54419AC900A008B534E /* SpeechSynthesizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3333D54319AC900A008B534E /* SpeechSynthesizerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3333D53E19AC900A008B534E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3333D52319AC900A008B534E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3333D52A19AC900A008B534E;
+			remoteInfo = SpeechSynthesizer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3333D52B19AC900A008B534E /* SpeechSynthesizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechSynthesizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3333D52F19AC900A008B534E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3333D53019AC900A008B534E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3333D53219AC900A008B534E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3333D53519AC900A008B534E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3333D53719AC900A008B534E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3333D53D19AC900A008B534E /* SpeechSynthesizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechSynthesizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3333D54219AC900A008B534E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3333D54319AC900A008B534E /* SpeechSynthesizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3333D52819AC900A008B534E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3333D53A19AC900A008B534E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3333D52219AC900A008B534E = {
+			isa = PBXGroup;
+			children = (
+				3333D52D19AC900A008B534E /* SpeechSynthesizer */,
+				3333D54019AC900A008B534E /* SpeechSynthesizerTests */,
+				3333D52C19AC900A008B534E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3333D52C19AC900A008B534E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3333D52B19AC900A008B534E /* SpeechSynthesizer.app */,
+				3333D53D19AC900A008B534E /* SpeechSynthesizerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3333D52D19AC900A008B534E /* SpeechSynthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				3333D53019AC900A008B534E /* AppDelegate.swift */,
+				3333D53219AC900A008B534E /* ViewController.swift */,
+				3333D53419AC900A008B534E /* Main.storyboard */,
+				3333D53719AC900A008B534E /* Images.xcassets */,
+				3333D52E19AC900A008B534E /* Supporting Files */,
+			);
+			path = SpeechSynthesizer;
+			sourceTree = "<group>";
+		};
+		3333D52E19AC900A008B534E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3333D52F19AC900A008B534E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3333D54019AC900A008B534E /* SpeechSynthesizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3333D54319AC900A008B534E /* SpeechSynthesizerTests.swift */,
+				3333D54119AC900A008B534E /* Supporting Files */,
+			);
+			path = SpeechSynthesizerTests;
+			sourceTree = "<group>";
+		};
+		3333D54119AC900A008B534E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3333D54219AC900A008B534E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3333D52A19AC900A008B534E /* SpeechSynthesizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3333D54719AC900A008B534E /* Build configuration list for PBXNativeTarget "SpeechSynthesizer" */;
+			buildPhases = (
+				3333D52719AC900A008B534E /* Sources */,
+				3333D52819AC900A008B534E /* Frameworks */,
+				3333D52919AC900A008B534E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeechSynthesizer;
+			productName = SpeechSynthesizer;
+			productReference = 3333D52B19AC900A008B534E /* SpeechSynthesizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3333D53C19AC900A008B534E /* SpeechSynthesizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3333D54A19AC900A008B534E /* Build configuration list for PBXNativeTarget "SpeechSynthesizerTests" */;
+			buildPhases = (
+				3333D53919AC900A008B534E /* Sources */,
+				3333D53A19AC900A008B534E /* Frameworks */,
+				3333D53B19AC900A008B534E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3333D53F19AC900A008B534E /* PBXTargetDependency */,
+			);
+			name = SpeechSynthesizerTests;
+			productName = SpeechSynthesizerTests;
+			productReference = 3333D53D19AC900A008B534E /* SpeechSynthesizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3333D52319AC900A008B534E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Timothy Rodney Nugent";
+				TargetAttributes = {
+					3333D52A19AC900A008B534E = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					3333D53C19AC900A008B534E = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 3333D52A19AC900A008B534E;
+					};
+				};
+			};
+			buildConfigurationList = 3333D52619AC900A008B534E /* Build configuration list for PBXProject "SpeechSynthesizer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3333D52219AC900A008B534E;
+			productRefGroup = 3333D52C19AC900A008B534E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3333D52A19AC900A008B534E /* SpeechSynthesizer */,
+				3333D53C19AC900A008B534E /* SpeechSynthesizerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3333D52919AC900A008B534E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3333D53619AC900A008B534E /* Main.storyboard in Resources */,
+				3333D53819AC900A008B534E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3333D53B19AC900A008B534E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3333D52719AC900A008B534E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3333D53319AC900A008B534E /* ViewController.swift in Sources */,
+				3333D53119AC900A008B534E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3333D53919AC900A008B534E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3333D54419AC900A008B534E /* SpeechSynthesizerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3333D53F19AC900A008B534E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3333D52A19AC900A008B534E /* SpeechSynthesizer */;
+			targetProxy = 3333D53E19AC900A008B534E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3333D53419AC900A008B534E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3333D53519AC900A008B534E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3333D54519AC900A008B534E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3333D54619AC900A008B534E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3333D54819AC900A008B534E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SpeechSynthesizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3333D54919AC900A008B534E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SpeechSynthesizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3333D54B19AC900A008B534E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SpeechSynthesizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeechSynthesizer.app/SpeechSynthesizer";
+			};
+			name = Debug;
+		};
+		3333D54C19AC900A008B534E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SpeechSynthesizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeechSynthesizer.app/SpeechSynthesizer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3333D52619AC900A008B534E /* Build configuration list for PBXProject "SpeechSynthesizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3333D54519AC900A008B534E /* Debug */,
+				3333D54619AC900A008B534E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3333D54719AC900A008B534E /* Build configuration list for PBXNativeTarget "SpeechSynthesizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3333D54819AC900A008B534E /* Debug */,
+				3333D54919AC900A008B534E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3333D54A19AC900A008B534E /* Build configuration list for PBXNativeTarget "SpeechSynthesizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3333D54B19AC900A008B534E /* Debug */,
+				3333D54C19AC900A008B534E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3333D52319AC900A008B534E /* Project object */;
+}

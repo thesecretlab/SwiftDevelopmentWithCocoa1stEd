@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		684C9DB01993032F00E40776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684C9DAF1993032F00E40776 /* AppDelegate.swift */; };
+		684C9DB51993032F00E40776 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 684C9DB31993032F00E40776 /* Main.storyboard */; };
+		684C9DB71993032F00E40776 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 684C9DB61993032F00E40776 /* Images.xcassets */; };
+		684C9DC31993032F00E40776 /* AwesomeGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684C9DC21993032F00E40776 /* AwesomeGridTests.swift */; };
+		684C9DCD1993044800E40776 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684C9DCC1993044800E40776 /* GridViewController.swift */; };
+		684C9DCF1993048700E40776 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684C9DCE1993048700E40776 /* GridCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		684C9DBD1993032F00E40776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 684C9DA21993032F00E40776 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 684C9DA91993032F00E40776;
+			remoteInfo = AwesomeGrid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		684C9DAA1993032F00E40776 /* AwesomeGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		684C9DAE1993032F00E40776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		684C9DAF1993032F00E40776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		684C9DB41993032F00E40776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		684C9DB61993032F00E40776 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		684C9DBC1993032F00E40776 /* AwesomeGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		684C9DC11993032F00E40776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		684C9DC21993032F00E40776 /* AwesomeGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeGridTests.swift; sourceTree = "<group>"; };
+		684C9DCC1993044800E40776 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		684C9DCE1993048700E40776 /* GridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		684C9DA71993032F00E40776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684C9DB91993032F00E40776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		684C9DA11993032F00E40776 = {
+			isa = PBXGroup;
+			children = (
+				684C9DAC1993032F00E40776 /* AwesomeGrid */,
+				684C9DBF1993032F00E40776 /* AwesomeGridTests */,
+				684C9DAB1993032F00E40776 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		684C9DAB1993032F00E40776 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				684C9DAA1993032F00E40776 /* AwesomeGrid.app */,
+				684C9DBC1993032F00E40776 /* AwesomeGridTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		684C9DAC1993032F00E40776 /* AwesomeGrid */ = {
+			isa = PBXGroup;
+			children = (
+				684C9DAF1993032F00E40776 /* AppDelegate.swift */,
+				684C9DCC1993044800E40776 /* GridViewController.swift */,
+				684C9DCE1993048700E40776 /* GridCell.swift */,
+				684C9DB31993032F00E40776 /* Main.storyboard */,
+				684C9DB61993032F00E40776 /* Images.xcassets */,
+				684C9DAD1993032F00E40776 /* Supporting Files */,
+			);
+			path = AwesomeGrid;
+			sourceTree = "<group>";
+		};
+		684C9DAD1993032F00E40776 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				684C9DAE1993032F00E40776 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		684C9DBF1993032F00E40776 /* AwesomeGridTests */ = {
+			isa = PBXGroup;
+			children = (
+				684C9DC21993032F00E40776 /* AwesomeGridTests.swift */,
+				684C9DC01993032F00E40776 /* Supporting Files */,
+			);
+			path = AwesomeGridTests;
+			sourceTree = "<group>";
+		};
+		684C9DC01993032F00E40776 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				684C9DC11993032F00E40776 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		684C9DA91993032F00E40776 /* AwesomeGrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 684C9DC61993032F00E40776 /* Build configuration list for PBXNativeTarget "AwesomeGrid" */;
+			buildPhases = (
+				684C9DA61993032F00E40776 /* Sources */,
+				684C9DA71993032F00E40776 /* Frameworks */,
+				684C9DA81993032F00E40776 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AwesomeGrid;
+			productName = AwesomeGrid;
+			productReference = 684C9DAA1993032F00E40776 /* AwesomeGrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		684C9DBB1993032F00E40776 /* AwesomeGridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 684C9DC91993032F00E40776 /* Build configuration list for PBXNativeTarget "AwesomeGridTests" */;
+			buildPhases = (
+				684C9DB81993032F00E40776 /* Sources */,
+				684C9DB91993032F00E40776 /* Frameworks */,
+				684C9DBA1993032F00E40776 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				684C9DBE1993032F00E40776 /* PBXTargetDependency */,
+			);
+			name = AwesomeGridTests;
+			productName = AwesomeGridTests;
+			productReference = 684C9DBC1993032F00E40776 /* AwesomeGridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		684C9DA21993032F00E40776 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Secret Lab";
+				TargetAttributes = {
+					684C9DA91993032F00E40776 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					684C9DBB1993032F00E40776 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 684C9DA91993032F00E40776;
+					};
+				};
+			};
+			buildConfigurationList = 684C9DA51993032F00E40776 /* Build configuration list for PBXProject "AwesomeGrid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 684C9DA11993032F00E40776;
+			productRefGroup = 684C9DAB1993032F00E40776 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				684C9DA91993032F00E40776 /* AwesomeGrid */,
+				684C9DBB1993032F00E40776 /* AwesomeGridTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		684C9DA81993032F00E40776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684C9DB51993032F00E40776 /* Main.storyboard in Resources */,
+				684C9DB71993032F00E40776 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684C9DBA1993032F00E40776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		684C9DA61993032F00E40776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684C9DCD1993044800E40776 /* GridViewController.swift in Sources */,
+				684C9DB01993032F00E40776 /* AppDelegate.swift in Sources */,
+				684C9DCF1993048700E40776 /* GridCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		684C9DB81993032F00E40776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684C9DC31993032F00E40776 /* AwesomeGridTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		684C9DBE1993032F00E40776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 684C9DA91993032F00E40776 /* AwesomeGrid */;
+			targetProxy = 684C9DBD1993032F00E40776 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		684C9DB31993032F00E40776 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				684C9DB41993032F00E40776 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		684C9DC41993032F00E40776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		684C9DC51993032F00E40776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		684C9DC71993032F00E40776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = AwesomeGrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		684C9DC81993032F00E40776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = AwesomeGrid/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		684C9DCA1993032F00E40776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AwesomeGridTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeGrid.app/AwesomeGrid";
+			};
+			name = Debug;
+		};
+		684C9DCB1993032F00E40776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AwesomeGridTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AwesomeGrid.app/AwesomeGrid";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		684C9DA51993032F00E40776 /* Build configuration list for PBXProject "AwesomeGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684C9DC41993032F00E40776 /* Debug */,
+				684C9DC51993032F00E40776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		684C9DC61993032F00E40776 /* Build configuration list for PBXNativeTarget "AwesomeGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684C9DC71993032F00E40776 /* Debug */,
+				684C9DC81993032F00E40776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		684C9DC91993032F00E40776 /* Build configuration list for PBXNativeTarget "AwesomeGridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684C9DCA1993032F00E40776 /* Debug */,
+				684C9DCB1993032F00E40776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 684C9DA21993032F00E40776 /* Project object */;
+}

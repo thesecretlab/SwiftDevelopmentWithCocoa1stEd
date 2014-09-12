@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:iOSStoryboards/iOSStoryboards.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TestExamples/TestExamples.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CoreAnimation/CoreAnimation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DynamicGravity/DynamicGravity.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DynamicSnap/DynamicSnap.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iDeviceBeacon/iDeviceBeacon.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Maps/Maps.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Motion/Motion.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Photos/Photos.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PrintingIOS/PrintingIOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SpeechSynthesizer/SpeechSynthesizer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SceneKit/SceneKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SpriteKit/SpriteKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOSDocuments/iOSDocuments.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AwesomeGrid/AwesomeGrid.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOSTableView/iOSTableView.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TextKitDemo/TextKitDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DocumentPicker/DocumentPicker.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MemoryDemo/MemoryDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:OperationQueues/OperationQueues.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MultipleWindows/MultipleWindows.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Notifications/Notifications.xcodeproj">
+   </FileRef>
+</Workspace>

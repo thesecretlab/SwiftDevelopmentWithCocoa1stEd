@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:AppNap/AppNap.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AVAudioPlayer/AVAudioPlayer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CocoaDocuments/CocoaDocuments.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CocoaTableView/CocoaTableView.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CommandLine/CommandLine.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Constraints/Constraints.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Controllers/Controllers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CoreAnimationOSX/CoreAnimationOSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DataDetectors/DataDetectors.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Events/Events.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Localized/Localized.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Location/Location.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:LocationWithReverseGeocoding/LocationWithReverseGeocoding.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Networking/Networking.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:OSXPrinting/OSXPrinting.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PreferencePane/PreferencePane.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SimpleBindings/SimpleBindings.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:StatusBarItem/StatusBarItem.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VideoPlayer/VideoPlayer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VideoPlayerWithAVKit/VideoPlayerWithAVKit.xcodeproj">
+   </FileRef>
+</Workspace>

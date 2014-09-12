@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3342DB9319AC3EBF00FE3B89 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342DB9219AC3EBF00FE3B89 /* main.swift */; };
+		3342DB9519AC3EBF00FE3B89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342DB9419AC3EBF00FE3B89 /* AppDelegate.swift */; };
+		3342DB9719AC3EBF00FE3B89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3342DB9619AC3EBF00FE3B89 /* Images.xcassets */; };
+		3342DB9A19AC3EBF00FE3B89 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3342DB9819AC3EBF00FE3B89 /* MainMenu.xib */; };
+		3342DBA619AC3EBF00FE3B89 /* VideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342DBA519AC3EBF00FE3B89 /* VideoPlayerTests.swift */; };
+		3342DBB019AC3F1A00FE3B89 /* TestVideo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 3342DBAF19AC3F1A00FE3B89 /* TestVideo.m4v */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3342DBA019AC3EBF00FE3B89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3342DB8519AC3EBF00FE3B89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3342DB8C19AC3EBF00FE3B89;
+			remoteInfo = VideoPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3342DB8D19AC3EBF00FE3B89 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3342DB9119AC3EBF00FE3B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3342DB9219AC3EBF00FE3B89 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3342DB9419AC3EBF00FE3B89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3342DB9619AC3EBF00FE3B89 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3342DB9919AC3EBF00FE3B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3342DB9F19AC3EBF00FE3B89 /* VideoPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3342DBA419AC3EBF00FE3B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3342DBA519AC3EBF00FE3B89 /* VideoPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerTests.swift; sourceTree = "<group>"; };
+		3342DBAF19AC3F1A00FE3B89 /* TestVideo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestVideo.m4v; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3342DB8A19AC3EBF00FE3B89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3342DB9C19AC3EBF00FE3B89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3342DB8419AC3EBF00FE3B89 = {
+			isa = PBXGroup;
+			children = (
+				3342DB8F19AC3EBF00FE3B89 /* VideoPlayer */,
+				3342DBA219AC3EBF00FE3B89 /* VideoPlayerTests */,
+				3342DB8E19AC3EBF00FE3B89 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3342DB8E19AC3EBF00FE3B89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3342DB8D19AC3EBF00FE3B89 /* VideoPlayer.app */,
+				3342DB9F19AC3EBF00FE3B89 /* VideoPlayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3342DB8F19AC3EBF00FE3B89 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3342DBAF19AC3F1A00FE3B89 /* TestVideo.m4v */,
+				3342DB9419AC3EBF00FE3B89 /* AppDelegate.swift */,
+				3342DB9619AC3EBF00FE3B89 /* Images.xcassets */,
+				3342DB9819AC3EBF00FE3B89 /* MainMenu.xib */,
+				3342DB9019AC3EBF00FE3B89 /* Supporting Files */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		3342DB9019AC3EBF00FE3B89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3342DB9119AC3EBF00FE3B89 /* Info.plist */,
+				3342DB9219AC3EBF00FE3B89 /* main.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3342DBA219AC3EBF00FE3B89 /* VideoPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3342DBA519AC3EBF00FE3B89 /* VideoPlayerTests.swift */,
+				3342DBA319AC3EBF00FE3B89 /* Supporting Files */,
+			);
+			path = VideoPlayerTests;
+			sourceTree = "<group>";
+		};
+		3342DBA319AC3EBF00FE3B89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3342DBA419AC3EBF00FE3B89 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3342DB8C19AC3EBF00FE3B89 /* VideoPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3342DBA919AC3EBF00FE3B89 /* Build configuration list for PBXNativeTarget "VideoPlayer" */;
+			buildPhases = (
+				3342DB8919AC3EBF00FE3B89 /* Sources */,
+				3342DB8A19AC3EBF00FE3B89 /* Frameworks */,
+				3342DB8B19AC3EBF00FE3B89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoPlayer;
+			productName = VideoPlayer;
+			productReference = 3342DB8D19AC3EBF00FE3B89 /* VideoPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3342DB9E19AC3EBF00FE3B89 /* VideoPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3342DBAC19AC3EBF00FE3B89 /* Build configuration list for PBXNativeTarget "VideoPlayerTests" */;
+			buildPhases = (
+				3342DB9B19AC3EBF00FE3B89 /* Sources */,
+				3342DB9C19AC3EBF00FE3B89 /* Frameworks */,
+				3342DB9D19AC3EBF00FE3B89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3342DBA119AC3EBF00FE3B89 /* PBXTargetDependency */,
+			);
+			name = VideoPlayerTests;
+			productName = VideoPlayerTests;
+			productReference = 3342DB9F19AC3EBF00FE3B89 /* VideoPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3342DB8519AC3EBF00FE3B89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Timothy Rodney Nugent";
+				TargetAttributes = {
+					3342DB8C19AC3EBF00FE3B89 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					3342DB9E19AC3EBF00FE3B89 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 3342DB8C19AC3EBF00FE3B89;
+					};
+				};
+			};
+			buildConfigurationList = 3342DB8819AC3EBF00FE3B89 /* Build configuration list for PBXProject "VideoPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3342DB8419AC3EBF00FE3B89;
+			productRefGroup = 3342DB8E19AC3EBF00FE3B89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3342DB8C19AC3EBF00FE3B89 /* VideoPlayer */,
+				3342DB9E19AC3EBF00FE3B89 /* VideoPlayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3342DB8B19AC3EBF00FE3B89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3342DB9719AC3EBF00FE3B89 /* Images.xcassets in Resources */,
+				3342DBB019AC3F1A00FE3B89 /* TestVideo.m4v in Resources */,
+				3342DB9A19AC3EBF00FE3B89 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3342DB9D19AC3EBF00FE3B89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3342DB8919AC3EBF00FE3B89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3342DB9519AC3EBF00FE3B89 /* AppDelegate.swift in Sources */,
+				3342DB9319AC3EBF00FE3B89 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3342DB9B19AC3EBF00FE3B89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3342DBA619AC3EBF00FE3B89 /* VideoPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3342DBA119AC3EBF00FE3B89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3342DB8C19AC3EBF00FE3B89 /* VideoPlayer */;
+			targetProxy = 3342DBA019AC3EBF00FE3B89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3342DB9819AC3EBF00FE3B89 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3342DB9919AC3EBF00FE3B89 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3342DBA719AC3EBF00FE3B89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3342DBA819AC3EBF00FE3B89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3342DBAA19AC3EBF00FE3B89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VideoPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3342DBAB19AC3EBF00FE3B89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VideoPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3342DBAD19AC3EBF00FE3B89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VideoPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoPlayer.app/Contents/MacOS/VideoPlayer";
+			};
+			name = Debug;
+		};
+		3342DBAE19AC3EBF00FE3B89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VideoPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoPlayer.app/Contents/MacOS/VideoPlayer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3342DB8819AC3EBF00FE3B89 /* Build configuration list for PBXProject "VideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3342DBA719AC3EBF00FE3B89 /* Debug */,
+				3342DBA819AC3EBF00FE3B89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3342DBA919AC3EBF00FE3B89 /* Build configuration list for PBXNativeTarget "VideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3342DBAA19AC3EBF00FE3B89 /* Debug */,
+				3342DBAB19AC3EBF00FE3B89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3342DBAC19AC3EBF00FE3B89 /* Build configuration list for PBXNativeTarget "VideoPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3342DBAD19AC3EBF00FE3B89 /* Debug */,
+				3342DBAE19AC3EBF00FE3B89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3342DB8519AC3EBF00FE3B89 /* Project object */;
+}

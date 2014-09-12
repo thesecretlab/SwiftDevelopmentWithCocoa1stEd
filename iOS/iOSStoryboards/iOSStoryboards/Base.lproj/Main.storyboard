@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSStoryboards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label appears in a compact-width size class." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-Mj-xok">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label appears on all size classes." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaZ-YW-edh">
+                                <rect key="frame" x="157" y="289" width="287" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="This label is centered in regular size classes, and pinned to the left in compact size classes." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndU-o1-JQk">
+                                <rect key="frame" x="188" y="448" width="224" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="2Oy-bp-FEa"/>
+                                    <constraint firstAttribute="width" constant="224" id="eus-VK-f5c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="188" y="648" width="224" height="132"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ndU-o1-JQk" secondAttribute="centerX" id="2oa-28-CDp"/>
+                            <constraint firstAttribute="centerY" secondItem="bpL-Mj-xok" secondAttribute="centerY" constant="50" id="2zz-uW-bw1"/>
+                            <constraint firstAttribute="centerX" secondItem="bpL-Mj-xok" secondAttribute="centerX" id="79d-6N-fd9"/>
+                            <constraint firstAttribute="bottom" secondItem="ndU-o1-JQk" secondAttribute="bottom" constant="20" symbolic="YES" id="7dE-oh-hh6"/>
+                            <constraint firstItem="ndU-o1-JQk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="B6T-Vr-LHo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bpL-Mj-xok" secondAttribute="trailing" constant="79" id="H1f-oF-IZS"/>
+                            <constraint firstAttribute="centerX" secondItem="DaZ-YW-edh" secondAttribute="centerX" id="Hjv-lU-3aZ"/>
+                            <constraint firstItem="bpL-Mj-xok" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="Ui1-HK-qwG"/>
+                            <constraint firstAttribute="centerY" secondItem="DaZ-YW-edh" secondAttribute="centerY" constant="1" id="qh5-MM-X5u"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bpL-Mj-xok"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2zz-uW-bw1"/>
+                                <exclude reference="79d-6N-fd9"/>
+                                <exclude reference="H1f-oF-IZS"/>
+                                <exclude reference="Ui1-HK-qwG"/>
+                                <exclude reference="2oa-28-CDp"/>
+                                <exclude reference="B6T-Vr-LHo"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="bpL-Mj-xok"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2zz-uW-bw1"/>
+                                <include reference="79d-6N-fd9"/>
+                                <include reference="H1f-oF-IZS"/>
+                                <include reference="Ui1-HK-qwG"/>
+                                <include reference="B6T-Vr-LHo"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="2oa-28-CDp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="136"/>
+        </scene>
+    </scenes>
+</document>

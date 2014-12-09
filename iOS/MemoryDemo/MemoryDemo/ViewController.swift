@@ -17,7 +17,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     /*
     // This version of viewDidLoad crashes the app.
     // BEGIN view_did_load
-    override func viewDidLoad ()  {
+    override func viewDidLayoutSubviews ()  {
         
         // Create 10,000 images
         let pageCount = 10000
@@ -30,7 +30,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Tell the scroll view about its new content size
         var contentSize = CGSize()
         contentSize.height = self.imagesContainer.bounds.size.height
-        contentSize.width = self.imagesContainer.bounds.size.width * CGFloat(pageCount)
+        contentSize.width = self.imagesContainer.bounds.size.width 
+            * CGFloat(pageCount)
         
         self.imagesContainer.contentSize = contentSize
     }
@@ -38,22 +39,23 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     */
     
     // This version of viewDidLoad works correctly.
-    // BEGIN view_did_load_v2
-    override func viewDidLoad ()  {
+// BEGIN view_did_load_v2
+override func viewDidLayoutSubviews ()  {
         
-        // Create 10,000 images
-        let pageCount = 10000
+    // Create 10,000 images
+    let pageCount = 10000
         
-        self.updatePages();
+    self.updatePages();
         
-        // Tell the scroll view about its new content size
-        var contentSize = CGSize()
-        contentSize.height = self.imagesContainer.bounds.size.height
-        contentSize.width = self.imagesContainer.bounds.size.width * CGFloat(pageCount)
+    // Tell the scroll view about its new content size
+    var contentSize = CGSize()
+    contentSize.height = self.imagesContainer.bounds.size.height
+    contentSize.width = self.imagesContainer.bounds.size.width
+    * CGFloat(pageCount)
         
-        self.imagesContainer.contentSize = contentSize
-    }
-    // END view_did_load_v2
+    self.imagesContainer.contentSize = contentSize
+}
+// END view_did_load_v2
 
     
     // BEGIN image_drawing_func
@@ -122,35 +124,37 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     // END load_page_with_number
 
-    // BEGIN update_pages
-    func updatePages() {
+// BEGIN update_pages
+func updatePages() {
         
-        var pageNumber = Int(imagesContainer.contentOffset.x / imagesContainer.bounds.size.width + 1)
+    var pageNumber = Int(imagesContainer.contentOffset.x /
+    imagesContainer.bounds.size.width + 1)
         
-        // Load the image previous to this one
-        self.loadPageWithNumber(pageNumber - 1)
+    // Load the image previous to this one
+    self.loadPageWithNumber(pageNumber - 1)
         
-        // Load the current page
-        self.loadPageWithNumber(pageNumber)
+    // Load the current page
+    self.loadPageWithNumber(pageNumber)
         
-        // Load the next page
-        self.loadPageWithNumber(pageNumber+1)
+    // Load the next page
+    self.loadPageWithNumber(pageNumber+1)
         
-        // Remove all image views that aren't on this page or the pages adjacent
-        // to it
-        for imageView in imagesContainer.subviews {
-            if imageView.tag < pageNumber - 1 || imageView.tag > pageNumber + 1 {
-                imageView.removeFromSuperview()
-            }
+    // Remove all image views that aren't on
+    // this page or the pages adjacent to it
+    for imageView in imagesContainer.subviews {
+        if imageView.tag < pageNumber - 1 ||
+            imageView.tag > pageNumber + 1 {
+            imageView.removeFromSuperview()
         }
     }
-    // END update_pages
+}
+// END update_pages
 
-    // BEGIN scrollview_did_scroll
-    func scrollViewDidScroll(scrollView: UIScrollView!)  {
-        self.updatePages()
-    }
-    // END scrollview_did_scroll
+// BEGIN scrollview_did_scroll
+func scrollViewDidScroll(scrollView: UIScrollView!)  {
+    self.updatePages()
+}
+// END scrollview_did_scroll
 
 
 }

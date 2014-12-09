@@ -28,7 +28,8 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     // BEGIN ios_tableview_sections
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView)
+        -> Int {
         return 1
     }
     // END ios_tableview_sections
@@ -46,11 +47,11 @@ class TableViewController: UITableViewController {
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("StringCell",
-                                    forIndexPath: indexPath) as UITableViewCell
+                            forIndexPath: indexPath) as UITableViewCell
 
         let string = data[indexPath.row]
 
-        cell.textLabel?.text = string
+        cell.textLabel.text = string
 
         return cell
         
@@ -72,7 +73,19 @@ class TableViewController: UITableViewController {
     }
     // END ios_tableview_cells_example
     */
+    /*
+    // BEGIN ios_tableview_cells_example2
+    override func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("StringCell", 
+    forIndexPath: indexPath) as UITableViewCell
 
+        cell.textLabel.text = "Hello!"
+
+        return cell
+    }
+    // END ios_tableview_cells_example2
+    */
     // BEGIN ios_tableview_selected
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath
                             indexPath: NSIndexPath)  {

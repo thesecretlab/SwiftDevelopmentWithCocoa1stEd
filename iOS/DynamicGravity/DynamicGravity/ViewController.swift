@@ -19,16 +19,17 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
-        
-        // creating and adding a gravity behaviour
-        let gravityBehaviour = UIGravityBehavior(items: [self.imageView])
-        self.dynamicAnimator.addBehavior(gravityBehaviour)
-        
-        // creating and adding a collision behaviour
-        let collisionBehaviour = UICollisionBehavior(items: [self.imageView])
-        collisionBehaviour.translatesReferenceBoundsIntoBoundary = true
-        self.dynamicAnimator.addBehavior(collisionBehaviour)
+        dynamicAnimator =
+                UIDynamicAnimator(referenceView: self.view)
+        // creating and adding a gravity behavior
+        let gravityBehavior = UIGravityBehavior(items: [self.imageView])
+        dynamicAnimator.addBehavior(gravityBehavior)
+            
+        // creating and adding a collision behavior
+        let collisionBehavior =
+            UICollisionBehavior(items: [self.imageView])
+        collisionBehavior.translatesReferenceBoundsIntoBoundary = true
+        dynamicAnimator.addBehavior(collisionBehavior)
     }
 }
 // END gui_dynamic_gravity

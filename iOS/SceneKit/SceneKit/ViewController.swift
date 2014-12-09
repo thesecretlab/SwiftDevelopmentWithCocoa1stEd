@@ -94,16 +94,18 @@ class ViewController: UIViewController {
         // This animation changes the 'position' property
         let moveUpDownAnimation = CABasicAnimation(keyPath: "position")
         
-        // Move 5 units on the Y axis (i.e. up)
-        moveUpDownAnimation.byValue = NSValue(SCNVector3: SCNVector3(x: 0, y: 5, z: 0))
+        // Move 5 units on the y-axis (i.e., up)
+        moveUpDownAnimation.byValue =
+            NSValue(SCNVector3: SCNVector3(x: 0, y: 5, z: 0))
         // Accelerate and decelerate at the ends, instead of 
         // mechanically bouncing
-        moveUpDownAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        moveUpDownAnimation.timingFunction =
+            CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         
         // Animation automatically moves back at the end
         moveUpDownAnimation.autoreverses = true
         
-        // Animation repeats an infinite number of times (i.e. loops forever)
+        // Animation repeats an infinite number of times (i.e., loops forever)
         moveUpDownAnimation.repeatCount = Float.infinity
         
         // The animation takes 2 seconds to run
@@ -118,9 +120,12 @@ class ViewController: UIViewController {
         
         // BEGIN text_node
         let text = SCNText(string: "SceneKit!", extrusionDepth: 0.2)
-        text.font = UIFont.systemFontOfSize(2) // text will be 2 units (meters) high
+        
+        // text will be 2 units (meters) high
+        text.font = UIFont.systemFontOfSize(2)
         let textNode = SCNNode(geometry: text)
-        // Positioned slightly to the left, and above the capsule (which is 10 units high)
+        // Positioned slightly to the left, and above the
+        // capsule (which is 10 units high)
         textNode.position = SCNVector3(x: -2, y: 6, z: 0)
         
         // Add the text node to the capsule node (not the scene's root node!)
@@ -132,7 +137,10 @@ class ViewController: UIViewController {
         // BEGIN text_rotation_animation
         // Rotate one full circle (2π) around the Y (up) axis
         let rotate = CABasicAnimation(keyPath: "eulerAngles")
-        rotate.byValue = NSValue(SCNVector3: SCNVector3(x: Float(0.0), y: Float(M_PI * 2.0), z: Float(0.0)))
+        rotate.byValue =
+            NSValue(SCNVector3: SCNVector3(x: Float(0.0),
+                                           y: Float(M_PI * 2.0),
+                                           z: Float(0.0)))
         
         // Do it forever
         rotate.repeatCount = Float.infinity
@@ -158,7 +166,8 @@ class ViewController: UIViewController {
         // Load a noise texture (requires importing SpriteKit)
         
         // BEGIN texture_generate
-        let noiseTexture = SKTexture(noiseWithSmoothness: 0.25, size: CGSize(width: 512, height: 512), grayscale: true)
+        let noiseTexture = SKTexture(noiseWithSmoothness: 0.25,
+            size: CGSize(width: 512, height: 512), grayscale: true)
         // END texture_generate
         
         // BEGIN texture_material_usage
@@ -172,7 +181,9 @@ class ViewController: UIViewController {
 
         // Normal mapping
         // BEGIN normal_map_texture_gen
-        let noiseNormalMapTexture = noiseTexture.textureByGeneratingNormalMapWithSmoothness(0.1, contrast: 1.0)
+        let noiseNormalMapTexture =
+            noiseTexture.textureByGeneratingNormalMapWithSmoothness(0.1,
+                contrast: 1.0)
         // END normal_map_texture_gen
         
         // BEGIN normal_map_apply
@@ -190,7 +201,8 @@ class ViewController: UIViewController {
         // Add a gesture recognizer
         
         // BEGIN tap_recognizer_setup
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: "tapped:")
+        let tapRecognizer
+            = UITapGestureRecognizer(target: self, action: "tapped:")
         sceneView.addGestureRecognizer(tapRecognizer)
         sceneView.userInteractionEnabled = true
         // END tap_recognizer_setup
@@ -209,7 +221,8 @@ class ViewController: UIViewController {
         // BEGIN constraint_adding
         let lookAtConstraint = SCNLookAtConstraint(target: capsuleNode)
         
-        // When enabled, the constraint will try to rotate around only a single axis
+        // When enabled, the constraint will try to rotate
+        // around only a single axis
         lookAtConstraint.gimbalLockEnabled = true
         pointerNode.constraints = [lookAtConstraint]
         // END constraint_adding
@@ -220,7 +233,9 @@ class ViewController: UIViewController {
         
         // Loading Collada files
         // BEGIN collada_loading
-        let critterDataURL = NSBundle.mainBundle().URLForResource("Critter", withExtension: "dae")
+        let critterDataURL =
+            NSBundle.mainBundle().URLForResource("Critter",
+                withExtension: "dae")
         let critterData = SCNSceneSource(URL: critterDataURL!, options: nil)
         // END collada_loading
         
@@ -229,7 +244,8 @@ class ViewController: UIViewController {
         
         // BEGIN collada_adding
         // Find the node called 'Critter'; if it exists, add it
-        let critterNode = critterData.entryWithIdentifier("Critter", withClass: SCNNode.self) as? SCNNode
+        let critterNode = critterData?.entryWithIdentifier("Critter",
+            withClass: SCNNode.self) as? SCNNode
         if critterNode != nil {
             critterNode?.position = SCNVector3(x: 5, y: 0, z: 0)
             scene.rootNode.addChildNode(critterNode!)
@@ -249,7 +265,9 @@ class ViewController: UIViewController {
         
         
         // BEGIN physics_adding
-        let critterPhysicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.Dynamic, shape: critterPhysicsShape)
+        let critterPhysicsBody =
+            SCNPhysicsBody(type: SCNPhysicsBodyType.Dynamic,
+                shape: critterPhysicsShape)
         critterNode?.physicsBody = critterPhysicsBody
         // END physics_adding
         
@@ -260,7 +278,9 @@ class ViewController: UIViewController {
         floorNode.position = SCNVector3(x: 0, y: -5, z: 0)
         scene.rootNode.addChildNode(floorNode)
         
-        let floorPhysicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.Static, shape: SCNPhysicsShape(geometry: floor, options: nil))
+        let floorPhysicsBody =
+            SCNPhysicsBody(type: SCNPhysicsBodyType.Static,
+                shape: SCNPhysicsShape(geometry: floor, options: nil))
         floorNode.physicsBody = floorPhysicsBody
         // END floor
 
@@ -281,15 +301,19 @@ class ViewController: UIViewController {
         
             // Find the object that was tapped
             let sceneView = self.view as SCNView
-            let hits = sceneView.hitTest(tapRecognizer.locationInView(tapRecognizer.view), options: nil) as [SCNHitTestResult]
+            let hits = sceneView.hitTest(tapRecognizer.locationInView(
+                                         tapRecognizer.view),
+                                         options: nil) as [SCNHitTestResult]
         
             // Make all selected items highlight
             for hit in hits {
             
                 // Get the first material, if one exists
-                if let theMaterial = hit.node.geometry?.materials?[0] as? SCNMaterial {
+                if let theMaterial =
+                    hit.node.geometry?.materials?[0] as? SCNMaterial {
                     // Animate from black to yellow
-                    let highlightAnimation = CABasicAnimation(keyPath: "contents")
+                    let highlightAnimation =
+                        CABasicAnimation(keyPath: "contents")
                     highlightAnimation.fromValue = UIColor.blackColor()
                     highlightAnimation.toValue = UIColor.yellowColor()
                     highlightAnimation.autoreverses = true
@@ -298,7 +322,8 @@ class ViewController: UIViewController {
                     
                     // Apply this animation to the material's
                     // emission property
-                    theMaterial.emission.addAnimation(highlightAnimation, forKey: "highlight")
+                    theMaterial.emission.addAnimation(
+                        highlightAnimation, forKey: "highlight")
                 }
                 
             }

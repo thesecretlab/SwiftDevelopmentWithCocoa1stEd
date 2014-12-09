@@ -53,24 +53,26 @@ class RectView : NSView {
         
         // Define the rectangles for the two components
         let squareRect = CGRectInset(rect,
-            rect.size.width * 0.4,
+            rect.size.width * 0.45,
             rect.size.height * 0.05)
         
         let circleRect = CGRectInset(rect,
-            rect.size.width * 0.2,
-            rect.size.height * 0.2)
+            rect.size.width * 0.3,
+            rect.size.height * 0.3)
         
-        let cornerRadius = 20.0
+        let cornerRadius : CGFloat = 20
         
         // Create the paths
         var circlePath = NSBezierPath(ovalInRect: circleRect);
-        var squarePath = NSBezierPath(roundedRect: squareRect, xRadius: cornerRadius, yRadius: cornerRadius)
+        var squarePath = NSBezierPath(roundedRect: squareRect, 
+                                                   xRadius: cornerRadius,
+                                                   yRadius: cornerRadius)
         
         // Add them to the main path
         squarePath.appendBezierPath(circlePath)
         bezierPath.appendBezierPath(squarePath)
         
-        // Set the colours and draw them
+        // Set the color and draw them
         NSColor.redColor().setFill()
         
         // Draw the path
@@ -78,17 +80,19 @@ class RectView : NSView {
     
     }
     // END multiple-subpaths
+
     */
 
     /*
-    // BEGIN shadow-example
+    // BEGIN shadow-example1
     override func drawRect(rect: NSRect)  {
         
         let drawingRect = CGRectInset(rect,
             rect.size.width * 0.1,
             rect.size.height * 0.1);
         
-        let cornerRadius = 20.0
+        let cornerRadius : CGFloat = 20
+        
         let bezierPath = NSBezierPath(roundedRect: drawingRect,
             xRadius: cornerRadius,
             yRadius: cornerRadius)
@@ -101,7 +105,7 @@ class RectView : NSView {
         let shadow = NSShadow() // <1>
         shadow.shadowColor = NSColor.blackColor() // <2>
         shadow.shadowOffset = NSSize(width: 3, height: -3) // <3>
-        shadow.shadowBlurRadius = 5 // <4>
+        shadow.shadowBlurRadius = 10 // <4>
         shadow.set() // <5>
         // END shadows
         
@@ -113,7 +117,38 @@ class RectView : NSView {
         // END load-graphics-state
         
     }
-    // END shadow-example
+    // END shadow-example1
+    */
+    
+    /*
+    // BEGIN shadow-example2
+    override func drawRect(rect: NSRect)  {
+        
+        let drawingRect = CGRectInset(rect,
+            rect.size.width * 0.1,
+            rect.size.height * 0.1);
+        
+        let cornerRadius : CGFloat = 20
+        
+        let bezierPath = NSBezierPath(roundedRect: drawingRect,
+            xRadius: cornerRadius,
+            yRadius: cornerRadius)
+        
+        NSGraphicsContext.saveGraphicsState()
+
+        let shadow = NSShadow()
+        shadow.shadowColor = NSColor.blackColor()
+        shadow.shadowOffset = NSSize(width: 3, height: -3)
+        shadow.shadowBlurRadius = 10
+        shadow.set()
+
+        NSColor.redColor().setFill()
+        bezierPath.fill()
+        
+        NSGraphicsContext.restoreGraphicsState()
+        
+    }
+    // END shadow-example2
     */
     
     /*
@@ -125,7 +160,8 @@ class RectView : NSView {
             rect.size.width * 0.1,
             rect.size.height * 0.1);
         
-        let cornerRadius = 20.0
+        let cornerRadius : CGFloat = 20
+        
         let bezierPath = NSBezierPath(roundedRect: drawingRect,
             xRadius: cornerRadius,
             yRadius: cornerRadius)
@@ -154,7 +190,9 @@ class RectView : NSView {
         var bezierPath = NSBezierPath()
         
         // Create a rectangle that's inset by 5% on all sides
-        var drawingRect = CGRectInset(self.bounds, self.bounds.size.width * 0.05, self.bounds.size.height * 0.05);
+        var drawingRect = CGRectInset(self.bounds, 
+                                      self.bounds.size.width * 0.05,
+                                      self.bounds.size.height * 0.05);
         
         // Define the points that make up the drawing
         var topLeft = CGPointMake(CGRectGetMinX(drawingRect),
@@ -176,12 +214,14 @@ class RectView : NSView {
         bezierPath.moveToPoint(topLeft)
         bezierPath.lineToPoint(topRight)
         bezierPath.lineToPoint(bottomLeft)
-        bezierPath.curveToPoint(bottomRight, controlPoint1: center, controlPoint2: center)
+        bezierPath.curveToPoint(bottomRight,
+                                controlPoint1: center,
+                                controlPoint2: center)
         
         // Finish drawing by closing the path
         bezierPath.closePath()
         
-        // Set the colours and draw them
+        // Set the colors and draw them
         NSColor.redColor().setFill()
         NSColor.blackColor().setStroke()
         
@@ -209,7 +249,17 @@ class RectView : NSView {
     }
     // END filled_rounded_view
     */
+    
     /*
+    // BEGIN ios_graphics_context
+    var context = UIGraphicsGetCurrentContext()
+    // END ios_graphics_context
+    */
+    
+    // BEGIN osx_graphics_context
+    var context = NSGraphicsContext.currentContext()?.CGContext
+    // END osx_graphics_context
+    
     // BEGIN rotation_example
     override func drawRect(rect: NSRect) {
         var pathRect = CGRectInset(self.bounds,
@@ -218,22 +268,14 @@ class RectView : NSView {
         
         let cornerRadius : CGFloat = 20.0
         
-        var rotationTransform = CGAffineTransformMakeRotation(CGFloat(M_PI) / 4.0)
+        var rotationTransform =
+            CGAffineTransformMakeRotation(CGFloat(M_PI) / 4.0)
         
         var rectanglePath = NSBezierPath(roundedRect:pathRect,
             xRadius:cornerRadius,
             yRadius:cornerRadius)
         
-        /*
-        // BEGIN ios_graphics_context
-        var context = UIGraphicsGetCurrentContext()
-        // END ios_graphics_context
-        */
-        return
-        // BEGIN osx_graphics_context
-        var context = NSGraphicsContext.currentContext().CGContext
-        // END osx_graphics_context
-        
+        var context = NSGraphicsContext.currentContext()!.CGContext
         
         CGContextSaveGState(context)
         
@@ -246,7 +288,7 @@ class RectView : NSView {
         
     }
     // END rotation_example
-*/
+
 
     
 

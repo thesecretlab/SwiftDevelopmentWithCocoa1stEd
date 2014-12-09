@@ -68,11 +68,11 @@ class ViewController: UIViewController {
             { () -> Void in
                 myView.backgroundColor = UIColor.greenColor()
             })
-            })
+            }, completion:
             { (finished:Bool) -> Void in
                 // completion handler, in this case we are doing nothing
                 println("Animation completed:\(finished)")
-            }
+            })
 // END ca_keyframe
     }
 }

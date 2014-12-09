@@ -32,12 +32,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cancelNotifications(sender: AnyObject) {
-        /*
+        
+        var aNotification = UILocalNotification()
+        
         // BEGIN cancel_specific_local_notification
-        var aNotification : UILocalNotification = ...
         UIApplication.sharedApplication().cancelLocalNotification(aNotification)
         // END cancel_specific_local_notification
-        */
         
         
         // BEGIN cancel_all_local_notifications

@@ -25,26 +25,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let urlString = "http://placekitten.com/\(Int(width))/\(Int(height))"
         
-        let url = NSURL(string:urlString)
-        
-        // Using this URL, make an NSURLSesssion and then create a data 
-        // request task.
-        let session = NSURLSession(
-            configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-        
-        let dataTask = session.dataTaskWithURL(url) {
-            (data: NSData?,
-            response: NSURLResponse?,
-            error: NSError?) in
+        if let url = NSURL(string:urlString) {
             
-            var image = NSImage(data: data)
-            self.imageView.image = image;
+            // Using this URL, make an NSURLSesssion and then create a data 
+            // request task.
+            let session = NSURLSession(
+                configuration: NSURLSessionConfiguration
+                               .defaultSessionConfiguration())
             
+            let dataTask = session.dataTaskWithURL(url) {
+                (data: NSData?,
+                response: NSURLResponse?,
+                error: NSError?) in
+                
+                if data == nil {
+                    self.imageView.image = nil
+                } else {
+                    if let image = NSImage(data: data!) {
+                        self.imageView.image = image;
+                    }
+                }
+                
+                
+            }
+            
+            // Call resume() on the data request to start it
+            dataTask.resume()
         }
-        
-        // Call resume() on the data request to start it
-        dataTask.resume()
-        
     }
     // END using_nsurlsession
    

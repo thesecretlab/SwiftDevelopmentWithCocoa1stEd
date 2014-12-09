@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 // ------
 // adding a var to hold the player
 // BEGIN video_var
-    var player: AVPlayer?
+var player: AVPlayer?
 // END video_var
 
 // ------

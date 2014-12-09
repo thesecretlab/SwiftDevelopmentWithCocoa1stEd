@@ -23,31 +23,33 @@ class AppDelegate: NSObject, NSApplicationDelegate,
     
     // BEGIN osx_tableviews_setup
     override func awakeFromNib() {
-        var aSong : Song!
+        if self.songs.count == 0 {
+            var aSong : Song!
         
-        aSong = Song()
-        aSong.title = "Gaeta's Lament"
-        aSong.duration = 289
+            aSong = Song()
+            aSong.title = "Gaeta's Lament"
+            aSong.duration = 289
         
-        self.songsController.addObject(aSong)
+            self.songsController.addObject(aSong)
         
-        aSong = Song()
-        aSong.title = "The Signal";
-        aSong.duration = 309
+            aSong = Song()
+            aSong.title = "The Signal";
+            aSong.duration = 309
         
-        self.songsController.addObject(aSong)
+            self.songsController.addObject(aSong)
         
-        aSong = Song()
-        aSong.title = "Resurrection Hub";
-        aSong.duration = 221
+            aSong = Song()
+            aSong.title = "Resurrection Hub";
+            aSong.duration = 221
         
-        self.songsController.addObject(aSong)
+            self.songsController.addObject(aSong)
         
-        aSong = Song()
-        aSong.title = "The Cult of Baltar";
-        aSong.duration = 342
+            aSong = Song()
+            aSong.title = "The Cult of Baltar";
+            aSong.duration = 342
         
-        self.songsController.addObject(aSong)
+            self.songsController.addObject(aSong)
+        }
     }
     // END osx_tableviews_setup
     
@@ -61,38 +63,32 @@ class AppDelegate: NSObject, NSApplicationDelegate,
     func tableView(tableView: NSTableView!, viewForTableColumn
                  tableColumn: NSTableColumn!, row: Int) -> NSView!  {
         
-        var textField : NSTextField! =
-                    tableView.makeViewWithIdentifier("TextField",
-                        owner: self) as? NSTextField
+        let cell =
+                    tableView.makeViewWithIdentifier(tableColumn.identifier,
+                        owner: self) as NSTableCellView
         
+        let textField = cell.textField
         let song = self.songs[row]
         
-        if textField == nil {
-            textField = NSTextField(frame: NSZeroRect)
-            textField.bordered = false
-            textField.editable = false
-            textField.drawsBackground = false
-            textField.identifier = "TextField"
-        }
-        
         if tableColumn.identifier == "Title" {
-            textField.stringValue = song.title
+            textField?.stringValue = song.title
         } else if tableColumn.identifier == "Duration" {
-            let durationText = NSString(format: "%i:%02i", Int(song.duration)
-                                                  / 60, Int(song.duration) % 60)
-            textField.stringValue = durationText
+            let durationText = NSString(format: "%i:%02i",
+                                        Int(song.duration) / 60,
+                                        Int(song.duration) % 60)
+            textField?.stringValue = durationText
         }
         
-        return textField;
+        return cell
     }
     // END osx_tableview_cells
     
     // BEGIN osx_tableview_sorting
     func tableView(tableView: NSTableView!,
                     sortDescriptorsDidChange oldDescriptors: [AnyObject]!)  {
-        var songsAsMutableArray = NSMutableArray(array: songs)
-        songsAsMutableArray.sortUsingDescriptors(tableView.sortDescriptors)
         
+        // Apply each sort descriptor, in reverse order 
+                        
         for sortDescriptor in tableView.sortDescriptors.reverse()
             as [NSSortDescriptor] {
             songs.sort() {

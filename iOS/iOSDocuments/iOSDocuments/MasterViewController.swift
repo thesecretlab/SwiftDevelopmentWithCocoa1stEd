@@ -44,11 +44,12 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView,
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("FileCell") as UITableViewCell
+        let cell = tableView
+            .dequeueReusableCellWithIdentifier("FileCell") as UITableViewCell
         
         let URL = documentURLs[indexPath.row]
         
-        cell.textLabel?.text = URL.lastPathComponent
+        cell.textLabel.text = URL.lastPathComponent
         
         return cell
     }
@@ -62,7 +63,8 @@ class MasterViewController: UITableViewController {
         documentToOpen.openWithCompletionHandler() {
             (success) in
             if success == true {
-                self.performSegueWithIdentifier("showDetail", sender: documentToOpen)
+                self.performSegueWithIdentifier("showDetail",
+                                                sender: documentToOpen)
             }
         }
         
@@ -98,7 +100,8 @@ class MasterViewController: UITableViewController {
             (success) in
             
             if success == true {
-                self.performSegueWithIdentifier("showDetail", sender: documentToCreate)
+                self.performSegueWithIdentifier("showDetail",
+                                                sender: documentToCreate)
             }
         }
         

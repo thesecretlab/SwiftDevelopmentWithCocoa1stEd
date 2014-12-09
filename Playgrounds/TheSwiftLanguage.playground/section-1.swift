@@ -18,6 +18,16 @@ myConstantVariable += 2
 // END changing_constant_var
 #endif
 
+// Multiple lines
+// BEGIN multiple_lines
+var someVariable =
+    "Yes"
+// END multiple_lines
+
+// Multiple statements
+// BEGIN multiple_statements
+someVariable = "No"; println(someVariable)
+// END multiple_statements
 
 #if os(NOPE)
     // BEGIN must_assign_value_to_constants
@@ -76,7 +86,7 @@ anOptionalInteger = 42
 
 #if os(NOPE)
 // BEGIN optional_type_error
-// Non-optional (regular), NOT allowed to be nil
+// Nonoptional (regular), NOT allowed to be nil
 var aNonOptionalInteger = 42
 
 aNonOptionalInteger = nil
@@ -92,16 +102,18 @@ if anOptionalInteger != nil {
 }
 // END optional_type_checking
 
+// Use an 'if false' here to prevent a crash due to deliberately 'broken' code in the following example
+if false {
 // BEGIN optional_unwrapping
 // Optional types must be unwrapped using !
 anOptionalInteger = 2
 1 + anOptionalInteger! // = 3
 
 anOptionalInteger = nil
-// 1 + anOptionalInteger!
+1 + anOptionalInteger!
 // CRASH: anOptionalInteger = nil, can't use nil data
 // END optional_unwrapping
-
+}
 
 // Optionals can also be declared unwrapped; this means you don't have to unwrap them later, but is unsafe
 // BEGIN optional_declared_unwrapped
@@ -123,7 +135,6 @@ let aString = String(anInteger)
     // END cant_directly_convert_types
 #endif
 
-if true {
 // Tuples
 // BEGIN tuples
 let aTuple = (1, "Yes")
@@ -132,15 +143,12 @@ let aTuple = (1, "Yes")
 // BEGIN tuples_accessing
 let theNumber = aTuple.0 // = 1
 // END tuples_accessing
-}
 
-if true {
 // BEGIN tuples_accessing_string
-let aTuple = (aNumber: 1, aString: "Yes")
+let anotherTuple = (aNumber: 1, aString: "Yes")
 
-let theNumber = aTuple.aNumber // = 1
+let theOtherNumber = anotherTuple.aNumber // = 1
 // END tuples_accessing_string
-}
 
 // ------
 // Arrays
@@ -156,7 +164,7 @@ let implicitArrayOfIntegers = [1,2,3]
 // END implicit_array
 
 // BEGIN create_empty_array
-// Can also create an empty array, but you have to provide the type
+// You can also create an empty array, but you must provide the type
 let anotherArray = [Int]()
 // END create_empty_array
 
@@ -231,8 +239,9 @@ aNumberDictionary[21] = 23
 
 // BEGIN if_block
 if 1+1 == 2 {
-    "The math checks out"
+    println("The math checks out")
 }
+// Prints "The math checks out", which is a relief
 // END if_block
 
 // For loops a for-in loop
@@ -253,7 +262,7 @@ for index in 1 ..< 10 {
 }
 // Loops 9 times
 // END for_range_exclusive
-"Looped \(firstCounter) times"
+println("Looped \(firstCounter) times")
 
 // BEGIN for_range_inclusive
 var secondCounter = 0
@@ -262,7 +271,7 @@ for index in 1 ... 10 { // note the three dots, not two
 }
 // Loops 10 times
 // END for_range_inclusive
-"Looped \(secondCounter) times"
+println("Looped \(secondCounter) times")
 
 // Using a for-condition-increment loop
 // BEGIN for_condition_increment
@@ -296,10 +305,11 @@ countUp // = 5
 var conditionalString : String? = "a string"
 
 if let theString = conditionalString? {
-    "The string is \(theString)"
+    println("The string is '\(theString)'")
 } else {
-    "The string is nil"
+    println("The string is nil")
 }
+// Prints "The string is 'a string'"
 // END if_let
 
 // ------
@@ -311,14 +321,16 @@ let integerSwitch = 3
 
 switch integerSwitch {
 case 0:
-    "It's 0"
+    println("It's 0")
 case 1:
-    "It's 1"
+    println("It's 1")
 case 2:
-    "It's 2"
-default: // note: default is mandatory if not all cases are covered (or can be covered)
-    "It's something else"
+    println("It's 2")
+default: // note: default is mandatory if not all 
+         // cases are covered (or can be covered)
+    println("It's something else")
 }
+// Prints "it's something else"
 // END switch_on_integer
 
 // Switching on a string
@@ -327,12 +339,13 @@ let stringSwitch = "Hello"
 
 switch stringSwitch {
 case "Hello":
-    "A greeting"
+    println("A greeting")
 case "Goodbye":
-    "A farewell"
+    println("A farewell")
 default:
-    "Something else"
+    println("Something else")
 }
+// Prints "A greeting"
 // END switch_on_string
 
 // Switching on a tuple
@@ -341,12 +354,13 @@ let tupleSwitch = ("Yes", 123)
 
 switch tupleSwitch {
 case ("Yes", 123):
-    "Tuple contains 'Yes' and '123'"
+    println("Tuple contains 'Yes' and '123'")
 case ("Yes", _):
-    "Tuple contains 'Yes' and something else"
+    println("Tuple contains 'Yes' and something else")
 default:
     break
 }
+// Prints "Tuple contains 'Yes' and '123'"
 // END switch_on_tuple
 
 // Switching on a range
@@ -355,12 +369,13 @@ var someNumber = 15
 
 switch someNumber {
 case 0...10:
-    "Number is between 0 and 10"
+    println("Number is between 0 and 10")
 case 11...20:
-    "Number is between 11 and 20"
+    println("Number is between 11 and 20")
 default:
-    "Number is something else"
+    println("Number is something else")
 }
+// Prints "Number is between 11 and 20"
 // END switch_on_range
 
 // ------
@@ -369,7 +384,7 @@ default:
 // Defining a function with no parameters and no return
 // BEGIN function
 func firstFunction() {
-    "Hello"
+    println("Hello")
 }
 firstFunction()
 // END function
@@ -392,7 +407,8 @@ thirdFunction(1, 2)
 
 // Functions can return multiple values, using a tuple
 // BEGIN function_returning_tuple
-func fourthFunction(firstValue: Int, secondValue: Int) -> (doubled: Int, quadrupled: Int) {
+func fourthFunction(firstValue: Int, secondValue: Int)
+    -> (doubled: Int, quadrupled: Int) {
     return (firstValue * 2, secondValue * 4)
 }
 fourthFunction(2, 4)
@@ -469,6 +485,9 @@ swap2 // = 2
 // BEGIN storing_function_in_variable
 var numbersFunc: (Int, Int) -> Int;
 // numbersFunc can now store any function that takes two ints and returns an int
+
+// Using the 'addNumbers' function from before, which takes two numbers
+// and adds them
 numbersFunc = addNumbers
 numbersFunc(2, 3) // = 5
 // END storing_function_in_variable
@@ -480,10 +499,14 @@ func timesThree(number: Int) -> Int {
 }
 
 func doSomethingToNumber(aNumber: Int, thingToDo: (Int)->Int) -> Int {
+    // we've received some function as a parameter, which we refer to as 
+    // 'thingToDo' inside this function.
+    
     // call the function 'thingToDo' using 'aNumber', and return the result
     return thingToDo(aNumber);
 }
 
+// Give the 'timesThree' function to use as 'thingToDo'
 doSomethingToNumber(4, timesThree) // = 12
 // END function_receiving_function_as_parameter
 
@@ -550,6 +573,14 @@ var numbersSortedReversedAgain = sorted(numbers) {
 } // = [120, 56, 32, 13, 2, 1]
 // END closure_with_braces_outside_parentheses
 
+// The line breaks are also optional.
+// BEGIN closure_with_braces_outside_parentheses_no_newlines
+var numbersSortedReversedOneMoreTime = sorted(numbers) { $0 > $1 }
+// = [120, 56, 32, 13, 2, 1]
+// END closure_with_braces_outside_parentheses_no_newlines
+
+
+
 // Closures can be stored in variables and used like functions
 // BEGIN closure_stored_in_variable_and_called_like_function
 var comparator = {(a: Int, b:Int) in a < b}
@@ -571,17 +602,17 @@ sortingInline // = [2, 2, 5, 13, 98]
 class Vehicle {
 
 // BEGIN properties_in_class
-    var colour: String?
+    var color: String?
     var maxSpeed = 80
 // END properties_in_class
     
 // BEGIN functions_in_class
     func description() -> String {
-        return "A \(self.colour) vehicle"
+        return "A \(self.color) vehicle"
     }
     
     func travel() {
-        println("Travelling at \(maxSpeed) kph")
+        println("Traveling at \(maxSpeed) kph")
     }
 // END functions_in_class
 }
@@ -589,9 +620,9 @@ class Vehicle {
 
 // BEGIN using_class
 var redVehicle = Vehicle()
-redVehicle.colour = "Red"
+redVehicle.color = "Red"
 redVehicle.maxSpeed = 90
-redVehicle.travel() // prints "Travelling at 90 kph"
+redVehicle.travel() // prints "Traveling at 90 kph"
 redVehicle.description() // = "A Red vehicle"
 // END using_class
 
@@ -619,7 +650,7 @@ class Motorcycle : Vehicle {
     var manufacturer : String
     
     override func description() -> String  {
-        return "A \(colour) \(manufacturer) bike"
+        return "A \(color) \(manufacturer) bike"
     }
     
     // By the end of the init function, all variables that are not optional must have a value
@@ -629,14 +660,14 @@ class Motorcycle : Vehicle {
         // The superclass' init function must be called after all properties defined in this subclass have a value
         super.init()
         
-        self.colour = "Blue"
+        self.color = "Blue"
         
     }
     
     // 'convenience' init functions let you set up default values, and must call the main init method first
     convenience init (colour : String) {
         self.init()
-        self.colour = colour
+        self.color = colour
     }
 }
 
@@ -651,11 +682,11 @@ secondBike.description() // = "A Red No-Name Brand™ bike"
 
 // Properties can be simple stored variables
 // BEGIN property_example
-class SimplePropertyExample {
+class Counter {
     var number: Int = 0
 }
-let test1 = SimplePropertyExample()
-test1.number = 2
+let myCounter = Counter()
+myCounter.number = 2
 // END property_example
 
 // Properties can be computed
@@ -671,7 +702,7 @@ class Rectangle {
         
         // computed setter
         set {            
-            // Assume equal dimensions (ie a square)
+            // Assume equal dimensions (i.e., a square)
             width = sqrt(newValue)
             height = sqrt(newValue)
         }
@@ -704,7 +735,7 @@ class PropertyObserverExample {
 // BEGIN property_observer_example
 var observer = PropertyObserverExample()
 observer.number = 4
-// prints "About to change to 4", then "Just changed from 0 to 5!"
+// prints "About to change to 4", then "Just changed from 0 to 4!"
 
 // END property_observer_example
 
@@ -720,7 +751,7 @@ class SomeExpensiveClass {
 class LazyPropertyExample {
     var expensiveClass1 = SomeExpensiveClass(id: 1)
     // note that we're actually constructing a class,
-    // but it's labelled as lazy
+    // but it's labeled as lazy
     lazy var expensiveClass2 = SomeExpensiveClass(id: 2)
     
     
@@ -766,6 +797,9 @@ class Light : Blinking {
     func startBlinking(blinkSpeed : Double) {
         println("I am now blinking")
         isBlinking = true
+        
+        // We say self.blinkSpeed here to help the compiler tell
+        // the difference between the parameter 'blinkSpeed' and the property
         self.blinkSpeed = blinkSpeed
     }
 }
@@ -776,8 +810,11 @@ var aBlinkingThing : Blinking?
 // can be ANY object that has the Blinking protocol
 
 aBlinkingThing = Light()
-aBlinkingThing!.startBlinking(4.0) // prints "I am now blinking"
-aBlinkingThing!.blinkSpeed // = 4.0
+
+// Using ? after the variable name checks to see 
+// if aBlinkingThing has a value before trying to work with it
+aBlinkingThing?.startBlinking(4.0) // prints "I am now blinking"
+aBlinkingThing?.blinkSpeed // = 4.0
 // END protocol_type
 
 // ------
@@ -908,16 +945,17 @@ class Class2 {
 
 // BEGIN init_and_deinit
 class InitAndDeinitExample {
-    // Designated (i.e. main) initialiser
+    // Designated (i.e., main) initializer
     init () {
         println("I've been created!")
     }
-    // Convenience initialiser
+    // Convenience initializer, required to call the
+    // designated initializer (above)
     convenience init (text: String) {
         self.init() // this is mandatory
-        println("I was called with the convenience initialiser!")
+        println("I was called with the convenience initializer!")
     }
-    // Deinitialiser
+    // Deinitializer
     deinit {
         println("I'm going away!")
     }
@@ -925,15 +963,38 @@ class InitAndDeinitExample {
 
 var example : InitAndDeinitExample?
 
-// using the designated initialiser
+// using the designated initializer
 example = InitAndDeinitExample() // prints "I've been created!"
 example = nil // prints "I'm going away"
 
-// using the convenience initialiser
+// using the convenience initializer
 example = InitAndDeinitExample(text: "Hello") 
 // prints "I've been created!" and then
-//  "I was called with the convenience initialiser"
+//  "I was called with the convenience initializer"
 // END init_and_deinit
+
+extension InitAndDeinitExample {
+    
+    // BEGIN init_failable
+    // This is a convenience initializer that can sometimes fail, returning nil
+    // Note the ? after the word 'init'
+    convenience init? (value: Int) {
+        self.init()
+        
+        if value > 5 {
+            // We can't initialize this object; return nil to indicate failure
+            return nil
+        }
+        
+    }
+    // END init_failable
+    
+}
+
+// BEGIN init_failable_example
+let failableExample = InitAndDeinitExample(value: 6)
+// = nil
+// END init_failable_example
 
 // ------
 // Mutable and Immutable Objects
@@ -1045,7 +1106,7 @@ aNumber + anNSNumber.integerValue
 
 // BEGIN string_to_data
 let stringToConvert = "Hello, Swift"
-let data = "foo".dataUsingEncoding(NSUTF8StringEncoding)
+let data = stringToConvert.dataUsingEncoding(NSUTF8StringEncoding)
 // END string_to_data
 
 // ------
@@ -1054,13 +1115,13 @@ let data = "foo".dataUsingEncoding(NSUTF8StringEncoding)
 // BEGIN loading_data_from_files
 // Loading from URL
 if let fileURL = NSBundle.mainBundle()
-    .URLForResource("A File", withExtension: "txt") {
+    .URLForResource("SomeFile", withExtension: "txt") {
     let loadedDataFromURL = NSData(contentsOfURL:fileURL)
 }
 
 // Loading from a file
 if let filePath = NSBundle.mainBundle()
-    .pathForResource("Something", ofType: "jpg") {
+    .pathForResource("SomeFile", ofType: "txt") {
     let loadedDataFromPath = NSData(contentsOfFile:filePath)
 }
 // END loading_data_from_files
@@ -1090,50 +1151,60 @@ let anObject = SerializableObject()
 
 anObject.name = "My Thing That I'm Saving"
 
-// converting it to data
+// Converting it to data
 let objectConvertedToData =
     NSKeyedArchiver.archivedDataWithRootObject(anObject)
 
-// loading it from data - SHOULD work, throws an exception :(
+// Converting it back
+// Note that the conversion might fail, so 'unarchiveObjectWithData' returns
+// an optional value. So, use 'as?' to check to see if it worked.
 let loadedObject =
-    NSKeyedUnarchiver.unarchiveObjectWithData(objectConvertedToData) as? SerializableObject
+    NSKeyedUnarchiver.unarchiveObjectWithData(objectConvertedToData)
+        as? SerializableObject
+
 loadedObject?.name
+// = "My Thing That I'm Saving"
 // END serializing_an_object
 
 // ------
 // Delegation
 
 // BEGIN delegate_example
-// Define a protocol that has a function called doSomething
-protocol MyClassDelegate {
-    func doSomething()
+// Define a protocol that has a function called handleIntruder
+protocol HouseSecurityDelegate {
+    
+    // We don't define the function here, but rather
+    // indicate that any class that is a HouseSecurityDelegate
+    // is required to have a handleIntruder() function
+    func handleIntruder()
 }
 
-class MyClass {
-    // The delegate can be any object that conforms to the MyClassDelegate
+class House {
+    // The delegate can be any object that conforms to the HouseSecurityDelegate
     // protocol
-    var delegate : MyClassDelegate?
+    var delegate : HouseSecurityDelegate?
     
-    func somethingHappened() {
+    func burglarDetected() {
         // Check to see if the delegate is there, then call it
-        delegate?.doSomething()
+        delegate?.handleIntruder()
     }
 }
+
+class GuardDog : HouseSecurityDelegate {
+    func handleIntruder() {
+        println("Releasing the hounds!")
+    }
+}
+
+
+let myHouse = House()
+myHouse.burglarDetected() // does nothing
+
+let theHounds = GuardDog()
+myHouse.delegate = theHounds
+myHouse.burglarDetected() // prints "Releasing the hounds!"
 // END delegate_example
 
-class SomeOtherThing : MyClassDelegate {
-    func doSomething() {
-        println("I'm being useful!")
-    }
-}
-
-
-let myClassObject = MyClass()
-myClassObject.somethingHappened() // does nothing
-
-let someOtherObject = SomeOtherThing()
-myClassObject.delegate = someOtherObject
-myClassObject.somethingHappened() // prints "I'm being useful!"
 
 // ------
 // Key-Value Observing
@@ -1166,3 +1237,132 @@ var observerObject = ObservingClass()
 observerObject.observeObject(aNewBoat) // NOTE: this appears to be throwing some kind of exception, will revisit later
 
 */
+
+// Swift and Objective-C
+
+// BEGIN swift_and_objc
+@objc class Cat : NSObject {
+    var name : String = ""
+    
+    func speak() -> String {
+        return "Meow"
+    }
+}
+// END swift_and_objc
+
+/*
+// This example is commented out because it calls itself infinitely recursively,
+// which is not a great thing.
+// BEGIN operator_example
+func +(left: Int, right: Int) -> Int {
+    return left + right
+}
+// END operator_example
+*/
+
+// BEGIN operators_class
+class Vector2D {
+    var x : Float = 0.0
+    var y : Float = 0.0
+    
+    init (x : Float, y: Float) {
+        self.x = x
+        self.y = y
+    }
+}
+// END operators_class
+
+// BEGIN operators_overload
+func +(left : Vector2D, right: Vector2D) -> Vector2D {
+    let result = Vector2D(x: left.x + right.x, y: left.y + right.y)
+    
+    return result
+}
+// END operators_overload
+
+// BEGIN operators_usage
+let first = Vector2D(x: 2, y: 2)
+let second = Vector2D(x: 4, y: 1)
+
+let result = first + second
+// = (x:6, y:3)
+// END operators_usage
+
+// BEGIN generics_example
+class Tree <T> {
+    
+    // 'T' can now be used as a type
+    var value : T
+    
+    var children : [Tree <T>] = []
+    
+    init(value : T) {
+        self.value = value
+    }
+    
+    func addChild(value : T) -> Tree <T> {
+        let newChild = Tree<T>(value: value)
+        children.append(newChild)
+        return newChild
+    }
+}
+// END generics_example
+
+// BEGIN generics_usage
+// Tree of integers
+let integerTree = Tree<Int>(value: 5)
+
+// Can add children that contain Ints
+integerTree.addChild(10)
+integerTree.addChild(5)
+
+// Tree of strings
+let stringTree = Tree<String>(value: "Hello")
+
+stringTree.addChild("Yes")
+stringTree.addChild("Internets")
+// END generics_usage
+
+/*
+// This section is commented out because it relies on code that would normally
+// be distributed across multiple files. We've included here in one place
+// for convenience.
+
+// BEGIN swift_and_objc_header
+#import "MyAppName-Swift.h"
+// END swift_and_objc_header
+
+// BEGIN swift_and_objc_using
+Cat* myCat = [[Cat alloc] init];
+myCat.name = "Fluffy";
+[myCat speak];
+// END swift_and_objc_using
+
+
+// BEGIN objc_and_swift
+@interface Elevator
+
+- (void) moveUp;
+- (void) moveDown;
+
+@property NSString* modelName;
+
+@end
+// END objc_and_swift
+
+// BEGIN objc_and_swift_bridging_header
+#import "Elevator.h"
+// END objc_and_swift_bridging_header
+
+// BEGIN objc_and_swift_using
+let theElevator = Elevator()
+
+theElevator.moveUp()
+theElevator.moveDown()
+
+theElevator.modelName = "The Great Glass Elevator"
+// END objc_and_swift_using
+
+*/
+
+

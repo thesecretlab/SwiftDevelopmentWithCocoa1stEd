@@ -59,7 +59,16 @@
       location = "group:MemoryDemo/MemoryDemo.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Pedometer/Pedometer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Handoffs/Handoffs.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:OperationQueues/OperationQueues.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Altimeter/Altimeter.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MultipleWindows/MultipleWindows.xcodeproj">

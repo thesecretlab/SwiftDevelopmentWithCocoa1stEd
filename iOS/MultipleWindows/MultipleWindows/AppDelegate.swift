@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             name: UIScreenDidDisconnectNotification,
             object: nil)
         
-        // We're in the middle of starting up. If the system already has multiple screens,
-        // set up the second one!
+        // We're in the middle of starting up. If the system already has
+        // multiple screens, set up the second one!
         if UIScreen.screens().count >= 2 {
             var secondScreen = UIScreen.screens()[1] as UIScreen
             self.setupScreen(secondScreen)
@@ -40,7 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    // Given a screen, prepare and display the view controller for the screen.
+    // Given a screen, prepare and display the view
+    // controller for the screen.
     func setupScreen(screen : UIScreen) {
         
         // If we already have a second window, do nothing
@@ -55,7 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Create a view controller to show in the window
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var viewController = storyboard.instantiateViewControllerWithIdentifier("secondWindowVC") as UIViewController
+        var viewController = storyboard
+            .instantiateViewControllerWithIdentifier("secondWindowVC")
+                as UIViewController
         
         // Show the view controller in the window
         self.secondWindow.rootViewController = viewController

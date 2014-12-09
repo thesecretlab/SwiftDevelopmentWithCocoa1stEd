@@ -28,14 +28,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 // core animation on OS X
 // BEGIN ca_osx
         // creating the animation
-        var colourAnim = CABasicAnimation(keyPath: "backgroundColor")
-        colourAnim.fromValue = NSColor.redColor().CGColor
-        colourAnim.toValue = NSColor.greenColor().CGColor
-        colourAnim.duration = 1.5
+        var colorAnim = CABasicAnimation(keyPath: "backgroundColor")
+        colorAnim.fromValue = NSColor.redColor().CGColor
+        colorAnim.toValue = NSColor.greenColor().CGColor
+        colorAnim.duration = 1.5
         
         // getting the views layer
         var layer = myView.layer!
-        layer.addAnimation(colourAnim, forKey: "backgroundColor")
+        layer.addAnimation(colorAnim, forKey: "backgroundColor")
         
         // setting the final value after the animation
         layer.backgroundColor = NSColor.greenColor().CGColor

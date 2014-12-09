@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Handoffs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TO9-XA-dcA">
+                                <rect key="frame" x="276" y="38" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchUpdated:" destination="BYZ-38-t0r" eventType="valueChanged" id="D8Y-Kg-pjL"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2On-Gb-dM5">
+                                <rect key="frame" x="276" y="77" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchUpdated:" destination="BYZ-38-t0r" eventType="valueChanged" id="mrj-Sg-qGt"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WgG-wH-O2F">
+                                <rect key="frame" x="276" y="116" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchUpdated:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qb4-kN-bE4"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WgG-wH-O2F" firstAttribute="top" secondItem="2On-Gb-dM5" secondAttribute="bottom" constant="8" id="2Vh-GT-Yae"/>
+                            <constraint firstItem="TO9-XA-dcA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="2do-GQ-PeV"/>
+                            <constraint firstItem="2On-Gb-dM5" firstAttribute="top" secondItem="TO9-XA-dcA" secondAttribute="bottom" constant="8" id="GJp-gk-7Ak"/>
+                            <constraint firstItem="2On-Gb-dM5" firstAttribute="centerX" secondItem="TO9-XA-dcA" secondAttribute="centerX" id="LMV-3r-r3B"/>
+                            <constraint firstAttribute="centerX" secondItem="TO9-XA-dcA" secondAttribute="centerX" constant="-0.5" id="PRV-gq-YsD"/>
+                            <constraint firstItem="2On-Gb-dM5" firstAttribute="centerX" secondItem="WgG-wH-O2F" secondAttribute="centerX" id="nBx-5o-YY1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="switch1" destination="TO9-XA-dcA" id="sa2-Du-smW"/>
+                        <outlet property="switch2" destination="2On-Gb-dM5" id="cHX-pC-EMG"/>
+                        <outlet property="switch3" destination="WgG-wH-O2F" id="fRh-p9-V1v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

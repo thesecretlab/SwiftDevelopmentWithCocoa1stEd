@@ -40,7 +40,8 @@ class GameScene: SKScene {
         let spriteNode = SKSpriteNode(imageNamed: "BlockSquareBlue")
         
         // Position the sprite right in the center of the scene
-        spriteNode.position = CGPoint(x: size.width / 2.0, y: size.height / 2.0)
+        spriteNode.position = CGPoint(x: size.width / 2.0,
+                                      y: size.height / 2.0)
         
         // Add the sprite
         self.addChild(spriteNode)
@@ -83,7 +84,8 @@ class GameScene: SKScene {
         
         // BEGIN text_finding_fonts
         for familyName in UIFont.familyNames() as [String] {
-            for fontName in UIFont.fontNamesForFamilyName(familyName) as [String] {
+            for fontName in UIFont.fontNamesForFamilyName(familyName)
+                as [String] {
                 println(fontName)
             }
         }
@@ -156,14 +158,18 @@ class GameScene: SKScene {
         
         // Shape nodes
         
-        // BEGIN shapenode_creating
-        let shapeNode = SKShapeNode(rectOfSize: CGSize(width: 50.0, height: 50.0))
-        // END shapenode_creating
+    // BEGIN shapenode_creating
+    let shapeNode = SKShapeNode(rectOfSize: CGSize(width: 50.0, height: 50.0))
+    // END shapenode_creating
         
         // BEGIN shapenode_creating_with_uibezierpath
-        // Can also provide a custom path
-                let path = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 50, height: 70))
-                let shapeNodeWithPath = SKShapeNode(path: path.CGPath, centered: true)
+                // Can also provide a custom path
+                let path = UIBezierPath(ovalInRect: CGRect(x: 0,
+                                                           y: 0,
+                                                           width: 50,
+                                                           height: 70))
+                let shapeNodeWithPath = SKShapeNode(path: path.CGPath,
+                                                    centered: true)
         // END shapenode_creating_with_uibezierpath
         
         
@@ -258,11 +264,13 @@ class GameScene: SKScene {
         // END joints_node_setup
         
         
-        // BEGIN joints_creating
-        let pinJoint = SKPhysicsJointPin.jointWithBodyA(hingeNode.physicsBody, bodyB: shapeNode.physicsBody, anchor: hingeNode.position)
+// BEGIN joints_creating
+let pinJoint = SKPhysicsJointPin.jointWithBodyA(hingeNode.physicsBody,
+                                                bodyB: shapeNode.physicsBody,
+                                                anchor: hingeNode.position)
 
-        self.physicsWorld.addJoint(pinJoint)
-        // END joints_creating
+self.physicsWorld.addJoint(pinJoint)
+// END joints_creating
         
         
         
@@ -313,8 +321,11 @@ class GameScene: SKScene {
         // END custom_shader_basic
 
         // BEGIN noise_shader_uniforms
-        let noiseTexture = SKTexture(noiseWithSmoothness: 0.5, size: CGSize(width: 256, height: 256), grayscale: true)
-        let textureUniform = SKUniform(name: "noiseTexture", texture: noiseTexture)
+        let noiseTexture = SKTexture(noiseWithSmoothness: 0.5,
+                                     size: CGSize(width: 256, height: 256),
+                                     grayscale: true)
+        let textureUniform = SKUniform(name: "noiseTexture",
+                                       texture: noiseTexture)
         let thresholdUniform = SKUniform(name: "threshold", float: 0.5);
         
         shader.addUniform(textureUniform)

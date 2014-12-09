@@ -39,7 +39,8 @@ class TestExamplesTests: XCTestCase {
     // BEGIN test_expectation
     func testExpectations() {
         
-        let openExpectation = self.expectationWithDescription("Something useful happened");
+        let openExpectation = 
+        self.expectationWithDescription("Something useful happened");
         
         // Perform some work that might take a bit of time
         // (This example method takes a block that runs when the work is done)

@@ -28,33 +28,36 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let inputString = self.inputTextField.stringValue
         var resultsText = ""
         
-        let matches = detector.matchesInString(inputString, options: nil,
-            range: NSMakeRange(0, countElements(inputString!)))
-        
-        for match in matches {
-            
-            if let result = match as? NSTextCheckingResult {
+        if let matches = detector?.matchesInString(inputString, options: nil,
+            range: NSMakeRange(0, countElements(inputString))) {
                 
-                switch result.resultType {
+            for match in matches {
+                
+                if let result = match as? NSTextCheckingResult {
                     
-                case NSTextCheckingType.Link:
-                    resultsText += "Link: \(result.URL)\n"
-                    
-                case NSTextCheckingType.Date:
-                    resultsText += "Date: \(result.date)\n"
-                    
-                case NSTextCheckingType.PhoneNumber:
-                    resultsText += "Phone Number: \(result.phoneNumber)"
-                    
-                case NSTextCheckingType.Address:
-                    resultsText += "Address: \(result.addressComponents)"
-                    
-                default:
-                    resultsText += "Something Else: \(result.description)\n"
-                    
+                    switch result.resultType {
+                        
+                    case NSTextCheckingType.Link:
+                        resultsText += "Link: \(result.URL)\n"
+                        
+                    case NSTextCheckingType.Date:
+                        resultsText += "Date: \(result.date)\n"
+                        
+                    case NSTextCheckingType.PhoneNumber:
+                        resultsText += "Phone Number: \(result.phoneNumber)"
+                        
+                    case NSTextCheckingType.Address:
+                        resultsText += "Address: \(result.addressComponents)"
+                        
+                    default:
+                        resultsText += "Other: \(result.description)\n"
+                        
+                    }
                 }
             }
         }
+        
+        
         
         self.outputTextField.stringValue = resultsText
         

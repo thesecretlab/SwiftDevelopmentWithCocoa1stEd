@@ -16,11 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     /*
     // BEGIN remote_notification_on_start_osx
-    func applicationDidFinishLaunching(_ aNotification: NSNotification!) {
-        var remoteNotification = aNotification.userInfo[NSApplicationLaunchRemoteNotificationKey]
+    func applicationDidFinishLaunching(_ aNotification: NSNotification) {
+        if let remoteNotification = aNotification
+            .userInfo[NSApplicationLaunchRemoteNotificationKey] {
     
-        if remoteNotification? {
-            // do something with the notification info
+            // do something with remoteNotification, which contains
+            // the notification info
         }
     }
     // END remote_notification_on_start_osx
@@ -32,7 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication!, 
         didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         
-        var remoteNotification = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey]
+        var remoteNotification =
+            launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey]
         
         if remoteNotification? {
             // do something with the notification info
@@ -48,7 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication!, 
         didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
     
-        var localNotification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey
+        var localNotification =
+            launchOptions[UIApplicationLaunchOptionsLocalNotificationKey
         
         if localNotification? {
             // do something with the notification info
@@ -91,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // (Always set to true when the activation mode is Foreground.)
         notificationAction.authenticationRequired = false
         
-        // Should the action be highlighted as destructive? (ie red and 
+        // Should the action be highlighted as destructive? (i.e., red and
         // dangerous looking)
         notificationAction.destructive = false
         // END defining_alert_action
@@ -137,7 +140,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // BEGIN notification_settings_register_with_actions
         // Create an NSSet containing a single object (the category 
-        // we defined above)
+        // we defined earlier)
         var notificationCategories = NSSet(object: notificationCategory)
         
         // Use that NSSet to create the notification settings
@@ -172,9 +175,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         // Called when the user selects an action from a local notification
         
-        println("Received notification \(notification.category)! Action was \(identifier)")
+        println("Received \(notification.category)! Action: \(identifier)")
         
-        // You must call this block when done dealing with the action, or you'll be terminated
+        // You must call this block when done dealing with the
+        // action, or you'll be terminated
        completionHandler()
         
     }
@@ -205,7 +209,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // BEGIN remote_notification_register_fail
     func application(application: UIApplication!,
         didFailToRegisterForRemoteNotificationsWithError error: NSError!) {
-        // Called when registering for remote notifications doesn't work for some reason
+        // Called when registering for remote notifications
+        // doesn't work for some reason
         println("Failed to register for notifications! \(error)")
     }
     // END remote_notification_register_fail
@@ -225,7 +230,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         handleActionWithIdentifier identifier: String!,
         forRemoteNotification userInfo: NSDictionary!,
         completionHandler: (() -> Void)!) {
-        // Called when a remote notification arrives, and the user selected an action
+        // Called when a remote notification arrives,
+        // and the user selected an action
     }
     // END remote_notification_receive_action
     

@@ -13,10 +13,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // BEGIN ubiq_kvs_property
     var cloudString : String? {
         get {
-            return NSUbiquitousKeyValueStore.defaultStore().stringForKey("cloud_string")
+            return NSUbiquitousKeyValueStore
+                .defaultStore()
+                .stringForKey("cloud_string")
         }
         set {
-            NSUbiquitousKeyValueStore.defaultStore().setString(newValue, forKey: "cloud_string")
+            NSUbiquitousKeyValueStore.defaultStore()
+                .setString(newValue, forKey: "cloud_string")
             NSUbiquitousKeyValueStore.defaultStore().synchronize()
         }
     }
@@ -49,8 +52,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let backgroundQueue = NSOperationQueue()
         
         backgroundQueue.addOperationWithBlock() {
-            // Pass 'nil' to this method to get the URL for the first iCloud container
-            // listed in the app's entitlements
+            // Pass 'nil' to this method to get the URL for the first iCloud
+            // container listed in the app's entitlements
             let ubiquityContainerURL = NSFileManager.defaultManager()
                 .URLForUbiquityContainerIdentifier(nil)
             
@@ -58,41 +61,47 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         // END icloud_ubiquitycontainer
         
-        // BEGIN ubiq_kvs_change_observer_registering
-        storeChangeObserver = NSNotificationCenter.defaultCenter().addObserverForName(NSUbiquitousKeyValueStoreDidChangeExternallyNotification, object: self, queue: NSOperationQueue.mainQueue()) {
-            (notification) in
-            self.willChangeValueForKey("cloudString")
-            self.didChangeValueForKey("cloudString")
-        }
-        // END ubiq_kvs_change_observer_registering
+// BEGIN ubiq_kvs_change_observer_registering
+storeChangeObserver =
+NSNotificationCenter.defaultCenter()
+    .addObserverForName(
+        NSUbiquitousKeyValueStoreDidChangeExternallyNotification,
+        object: self,
+        queue: NSOperationQueue.mainQueue()) {
+    (notification) in
+    self.willChangeValueForKey("cloudString")
+    self.didChangeValueForKey("cloudString")
+}
+// END ubiq_kvs_change_observer_registering
         
        
-        // BEGIN metadata_query
-        metadataQuery = NSMetadataQuery()
-        metadataQuery.searchScopes = [NSMetadataQueryUbiquitousDocumentsScope]
-        metadataQuery.predicate =
-            NSPredicate(format: "%K LIKE '*'", NSMetadataItemFSNameKey)
+// BEGIN metadata_query
+metadataQuery = NSMetadataQuery()
+metadataQuery.searchScopes =
+    [NSMetadataQueryUbiquitousDocumentsScope]
+metadataQuery.predicate =
+    NSPredicate(format: "%K LIKE '*'", NSMetadataItemFSNameKey)
         
-        self.metadataQueryDidUpdateObserver =
-            NSNotificationCenter.defaultCenter()
-                .addObserverForName(NSMetadataQueryDidUpdateNotification,
-                    object: nil, queue: NSOperationQueue.mainQueue()) {
+self.metadataQueryDidUpdateObserver =
+    NSNotificationCenter.defaultCenter()
+        .addObserverForName(NSMetadataQueryDidUpdateNotification,
+            object: nil, queue: NSOperationQueue.mainQueue()) {
             
-            (notification) in
-            self.queryDidUpdate()
-        }
+    (notification) in
+    self.queryDidUpdate()
+}
         
-        self.metadataQueryDidFinishGatheringObserver =
-            NSNotificationCenter.defaultCenter()
-                .addObserverForName(NSMetadataQueryDidFinishGatheringNotification,
-                    object: nil, queue: NSOperationQueue.mainQueue()) {
+self.metadataQueryDidFinishGatheringObserver =
+    NSNotificationCenter.defaultCenter()
+        .addObserverForName(NSMetadataQueryDidFinishGatheringNotification,
+            object: nil, queue: NSOperationQueue.mainQueue()) {
             
-            (notification) in
-            self.queryDidUpdate()
-        }
+    (notification) in
+    self.queryDidUpdate()
+}
         
-        metadataQuery.startQuery()
-        // END metadata_query
+metadataQuery.startQuery()
+// END metadata_query
 
         
     }
@@ -104,15 +113,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         for item in metadataQuery.results  {
             
             if let metadataItem = item as? NSMetadataItem {
-                let url = metadataItem.valueForAttribute(NSMetadataItemURLKey) as NSURL
+                let url =
+                    metadataItem
+                        .valueForAttribute(NSMetadataItemURLKey) as NSURL
                 urls.append(url)
             }
-            
             
         }
         
         self.filesInCloudStorage = urls
     }
+    // END metadata_query_did_update
+    
     
     // BEGIN ubiq_add_file
     @IBAction func addFile(sender : AnyObject?) {
@@ -124,23 +136,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if (result == NSOKButton) {
                 let containerURL = NSFileManager.defaultManager()
                     .URLForUbiquityContainerIdentifier(nil)?
-                    .URLByAppendingPathComponent("Documents", isDirectory: true)
+                    .URLByAppendingPathComponent("Documents", 
+                                                  isDirectory: true)
                 
-                let sourceURL = panel.URL
-                let destinationURL = containerURL?
-                    .URLByAppendingPathComponent(panel.URL.lastPathComponent)
-                
-                var error : NSError?
-                
-                // Move the file into iCloud (AKA "ubiquitous storage")
-                NSFileManager.defaultManager().setUbiquitous(true,
-                    itemAtURL: sourceURL,
-                    destinationURL: destinationURL!,
-                    error: &error)
-                
-                if error != nil {
-                    println("Couldn't make the file ubiqitous: \(error)")
+                if let sourceURL = panel.URL {
+                    let destinationURL = containerURL?
+                        .URLByAppendingPathComponent(
+                            sourceURL.lastPathComponent)
+                    
+                    var error : NSError?
+                    
+                    // Move the file into iCloud (AKA "ubiquitous storage")
+                    NSFileManager.defaultManager().setUbiquitous(true,
+                        itemAtURL: sourceURL,
+                        destinationURL: destinationURL!,
+                        error: &error)
+                    
+                    if error != nil {
+                        println("Couldn't make the file ubiqitous: \(error)")
+                    }
                 }
+                
             }
             
         }

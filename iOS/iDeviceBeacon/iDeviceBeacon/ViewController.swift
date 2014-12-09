@@ -14,8 +14,8 @@ import CoreLocation
 import CoreBluetooth
 
 class ViewController: UIViewController,CBPeripheralManagerDelegate{
-    var bluetoothManager = CBPeripheralManager()
-                            
+    var bluetoothManager : CBPeripheralManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,7 +48,7 @@ class ViewController: UIViewController,CBPeripheralManagerDelegate{
 // BEGIN ibeacon_config
     func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager!) {
         
-        if (self.bluetoothManager.state == CBPeripheralManagerState.PoweredOn)
+        if (self.bluetoothManager?.state == CBPeripheralManagerState.PoweredOn)
         {
             // the UUID string was generated using the uuidgen command
             let uuid = NSUUID(UUIDString:"F7769B0E-BF97-4485-B63E-8CE121988EAF")
@@ -59,7 +59,7 @@ class ViewController: UIViewController,CBPeripheralManagerDelegate{
                 identifier: "Awesome painting");
             
             var beaconData = beaconRegion.peripheralDataWithMeasuredPower(nil)
-            self.bluetoothManager.startAdvertising(beaconData)
+            self.bluetoothManager?.startAdvertising(beaconData)
         }
     }
 // END ibeacon_config

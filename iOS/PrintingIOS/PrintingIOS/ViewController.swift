@@ -19,7 +19,8 @@ class ViewController: UIViewController {
         var printInteraction =
                 UIPrintInteractionController.sharedPrintController()
         
-        var textFormatter = UISimpleTextPrintFormatter(text: self.textView.text)
+        var textFormatter =
+            UISimpleTextPrintFormatter(text: self.textView.text)
         printInteraction?.printFormatter = textFormatter
         
         printInteraction?.presentAnimated(true,

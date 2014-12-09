@@ -6,11 +6,13 @@ Code from [Secret Lab](http://www.secretlab.com.au)'s book, [Swift Development w
 
 Swift Development with Cocoa was written by [Jon Manning](http://twitter.com/desplesda), [Paris Buttfield-Addison](http://www.paris.id.au), and [Tim Nugent](http://lonely.coffee).
 
+More info at [Secret Lab](http://www.secretlab.com.au/books/swift-development-with-cocoa).
+
 You can email us at [lab@secretlab.com.au](mailto:lab@secretlab.com.au)
 
 ## License
 
-The code in this repository is licensed under the MIT license unless otherwise noted within specific files.
+The code/files in this repository are licensed under the MIT license unless otherwise noted within specific files.
 
 Copyright (c) 2014 Secret Lab, Pty. Ltd.
 

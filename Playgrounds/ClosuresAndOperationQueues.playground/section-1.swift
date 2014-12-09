@@ -13,10 +13,11 @@ let aViewController = UIViewController()
 var anotherViewController = UIViewController()
 
 // BEGIN completionhandler
-// In this code, aViewController and anotherViewController are both UIViewControllers.
+// In this code, aViewController and anotherViewController
+// are both UIViewControllers.
 
 // Slide up a view controller, and then when the slide animation is
-// finished, change its background color to yellow.
+// finished, change its view's background color to yellow.
 
 aViewController.presentViewController(anotherViewController, animated: true) {
     // This closure is run after the animation is finished

@@ -22,7 +22,12 @@ class SampleDocument: UIDocument {
         if let data = contents as? NSData {
             
             if data.length > 0 {
-                self.text = NSString(data: data, encoding: NSUTF8StringEncoding)
+                // Attempt to decode the data into text; if it's successful
+                // store it in self.text
+                if let theText =
+                    NSString(data: data, encoding: NSUTF8StringEncoding) {
+                        self.text = theText
+                }
             }
             
         }

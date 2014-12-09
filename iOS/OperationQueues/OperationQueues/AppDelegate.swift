@@ -44,11 +44,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var notificationURL = NSURL(string: "http://www.oreilly.com/")
             
             // Prepare the URL request
-            var notificationURLRequest = NSURLRequest(URL: notificationURL)
+            var notificationURLRequest = NSURLRequest(URL: notificationURL!)
             
             // Send the request, and log the reply
             var loadedData =
-                NSURLConnection.sendSynchronousRequest(notificationURLRequest,
+                NSURLConnection.sendSynchronousRequest(
+                                        notificationURLRequest,
                                         returningResponse: nil,
                                         error: nil)
             
@@ -57,12 +58,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 var loadedString = NSString(data: theData,
                                         encoding: NSUTF8StringEncoding)
                 
-                println("Loaded: %@", String(format: loadedString))
+                println("Loaded: \(loadedString)")
                 
             }
             
             
-            // Signal to the system that we're done working in the background
+            // Signal that we're done working in the background
             application.endBackgroundTask(self.backgroundTask!)
         }
         

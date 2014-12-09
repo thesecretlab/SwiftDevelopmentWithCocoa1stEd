@@ -32,23 +32,23 @@ class ViewController: UIViewController,UITableViewDelegate,
     }
     // END table_view_stuff
     
-    // BEGIN cell_configuration
-    func tableView(tableView: UITableView,
-        cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell  {
+// BEGIN cell_configuration
+func tableView(tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell  {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("FaviconCell")
-                                                        as FaviconTableViewCell
+    var cell = tableView.dequeueReusableCellWithIdentifier("FaviconCell")
+                                                as FaviconTableViewCell
         
-        var host = hosts[indexPath.row]
-        var url = NSURL(string: "http://\(host)/favicon.ico")
+    var host = hosts[indexPath.row]
+    var url = NSURL(string: "http://\(host)/favicon.ico")
         
-        cell.operationQueue = queue
-        cell.url = url
+    cell.operationQueue = queue
+    cell.url = url
         
-        return cell
+    return cell
         
-    }
-    // END cell_configuration
+}
+// END cell_configuration
 
 
 }

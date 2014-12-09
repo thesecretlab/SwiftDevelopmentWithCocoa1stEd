@@ -42,106 +42,106 @@ class Document: NSDocument {
     }
     
     /*
-    // BEGIN osx_documents_loading
-    override func windowControllerDidLoadNib(aController: NSWindowController) {
+// BEGIN osx_documents_loading
+override func windowControllerDidLoadNib(aController: NSWindowController) {
         
-        // The window has loaded, and is ready to display. 
-        // Take the text that we loaded earlier and display 
-        // it in the text field
-        super.windowControllerDidLoadNib(aController)
+    // The window has loaded, and is ready to display.
+    // Take the text that we loaded earlier and display
+    // it in the text field
+    super.windowControllerDidLoadNib(aController)
         
-        self.textField.stringValue = self.text
-    }
+    self.textField.stringValue = self.text
+}
 
-    override func dataOfType(typeName: String?, 
-        error outError: NSErrorPointer) -> NSData? {
+override func dataOfType(typeName: String?,
+    error outError: NSErrorPointer) -> NSData? {
         
-        // Convert the contents of the text field into data,
-        // and return it
-        self.text = self.textField.stringValue
+    // Convert the contents of the text field into data,
+    // and return it
+    self.text = self.textField.stringValue
         
-        return self.text.dataUsingEncoding(NSUTF8StringEncoding,
-            allowLossyConversion: false)
-    }
+    return self.text.dataUsingEncoding(NSUTF8StringEncoding,
+        allowLossyConversion: false)
+}
 
-    override func readFromData(data: NSData?, ofType typeName: String?, 
-        error outError: NSErrorPointer) -> Bool {
+override func readFromData(data: NSData?, ofType typeName: String?,
+    error outError: NSErrorPointer) -> Bool {
         
-        // Attempt to load a string from the data; if it works, store it 
-        // in self.text
-        if data?.length > 0 {
-            let string = NSString(data: data, encoding: NSUTF8StringEncoding)
-            self.text = string
-        } else {
-            self.text = ""
-        }
-        
-        return true
+    // Attempt to load a string from the data; if it works, store it
+    // in self.text
+    if data?.length > 0 {
+        let string = NSString(data: data, encoding: NSUTF8StringEncoding)
+        self.text = string
+    } else {
+        self.text = ""
     }
+        
+    return true
+}
     // END osx_documents_loading
     */
 
-    // BEGIN osx_documents_loading_advanced
-    override func windowControllerDidLoadNib(aController: NSWindowController) {
+// BEGIN osx_documents_loading_advanced
+override func windowControllerDidLoadNib(aController: NSWindowController) {
         
-        // The window has loaded, and is ready to display.
-        // Take the text that we loaded earlier and display
-        // it in the text field
-        super.windowControllerDidLoadNib(aController)
+    // The window has loaded, and is ready to display.
+    // Take the text that we loaded earlier and display
+    // it in the text field
+    super.windowControllerDidLoadNib(aController)
         
-        self.textField.stringValue = self.text
-        self.checkbox.integerValue = Int(self.checked)
-    }
+    self.textField.stringValue = self.text
+    self.checkbox.integerValue = Int(self.checked)
+}
     
-    override func dataOfType(typeName: String?,
-        error outError: NSErrorPointer) -> NSData? {
+override func dataOfType(typeName: String?,
+    error outError: NSErrorPointer) -> NSData? {
         
-        self.text = self.textField.stringValue
-        self.checked = Bool(self.checkbox.integerValue)
+    self.text = self.textField.stringValue
+    self.checked = Bool(self.checkbox.integerValue)
         
-        let dictionary = ["checked": self.checked,
-                          "text": self.text]
+    let dictionary = ["checked": self.checked,
+                        "text": self.text]
         
-        var error : NSError? = nil
+    var error : NSError? = nil
         
-        let serializedData = NSJSONSerialization.dataWithJSONObject(dictionary,
-            options: NSJSONWritingOptions.PrettyPrinted, error: &error)
+    let serializedData = NSJSONSerialization.dataWithJSONObject(dictionary,
+        options: NSJSONWritingOptions.PrettyPrinted, error: &error)
         
-        if serializedData == nil || error != nil {
+    if serializedData == nil || error != nil {
             
-            outError.memory = error
+        outError.memory = error
             
-            return nil;
-        } else {
-            return serializedData
-        }
-        
+        return nil;
+    } else {
+        return serializedData
     }
+        
+}
     
-    override func readFromData(data: NSData, ofType typeName: String?,
-        error outError: NSErrorPointer) -> Bool {
+override func readFromData(data: NSData, ofType typeName: String?,
+    error outError: NSErrorPointer) -> Bool {
         
-        var error : NSError? = nil
+    var error : NSError? = nil
         
-        let data = NSJSONSerialization.JSONObjectWithData(data,
-            options: NSJSONReadingOptions(), error: &error) as? NSDictionary
+    let data = NSJSONSerialization.JSONObjectWithData(data,
+        options: NSJSONReadingOptions(), error: &error) as? NSDictionary
         
-        if data == nil || error != nil {
-            outError.memory = error
-            return false
-        }
-        
-        if let text = data!["text"] as? String {
-            self.text = text
-        }
-        
-        if let checked = data!["checked"] as? Bool {
-            self.checked = checked
-        }
-        
-        return true
+    if data == nil || error != nil {
+        outError.memory = error
+        return false
     }
-    // END osx_documents_loading_advanced
+        
+    if let text = data!["text"] as? String {
+        self.text = text
+    }
+        
+    if let checked = data!["checked"] as? Bool {
+        self.checked = checked
+    }
+        
+    return true
+}
+// END osx_documents_loading_advanced
 
 
 

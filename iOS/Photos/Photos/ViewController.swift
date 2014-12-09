@@ -41,7 +41,7 @@ class ViewController: UIViewController,
             
             let frontCamera = UIImagePickerControllerCameraDevice.Front
             let rearCamera = UIImagePickerControllerCameraDevice.Rear
-            //use the front facing camera if available
+            //use the front-facing camera if available
             if (UIImagePickerController.isCameraDeviceAvailable(frontCamera))
             {
                 picker.cameraDevice = frontCamera
@@ -53,7 +53,8 @@ class ViewController: UIViewController,
             // make this object be the delegate for the picker
             picker.delegate = self
             
-            self.presentViewController(picker, animated: true, completion: nil)
+            self.presentViewController(picker, animated: true,
+                completion: nil)
         }
         
     }
@@ -64,7 +65,8 @@ class ViewController: UIViewController,
 // BEGIN picker_library
     @IBAction func loadFromLibrary(sender: AnyObject) {
         var picker = UIImagePickerController()
-        picker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
+        picker.sourceType =
+            UIImagePickerControllerSourceType.SavedPhotosAlbum
         picker.delegate = self
         self.presentViewController(picker, animated: true, completion: nil)
     }

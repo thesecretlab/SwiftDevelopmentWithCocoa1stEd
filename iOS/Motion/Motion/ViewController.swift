@@ -32,32 +32,32 @@ class ViewController: UIViewController {
 // ------
 // motion func
 // BEGIN motion_func
-    override func viewDidAppear(animated: Bool) {
-        self.motionManager.startDeviceMotionUpdatesToQueue(
-            NSOperationQueue.mainQueue(),
-            withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
-                let xString = NSString(format:"%.1f", motion.userAcceleration.x)
-                let yString = NSString(format:"%.1f", motion.userAcceleration.y)
-                let zString = NSString(format:"%.1f", motion.userAcceleration.z)
+override func viewDidAppear(animated: Bool) {
+    self.motionManager.startDeviceMotionUpdatesToQueue(
+        NSOperationQueue.mainQueue(),
+        withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
+          let xString = NSString(format:"%.1f", motion.userAcceleration.x)
+          let yString = NSString(format:"%.1f", motion.userAcceleration.y)
+          let zString = NSString(format:"%.1f", motion.userAcceleration.z)
                 
-                self.xLabel.text = xString
-                self.yLabel.text = yString
-                self.zLabel.text = zString
+          self.xLabel.text = xString
+          self.yLabel.text = yString
+          self.zLabel.text = zString
                 
-                //convert the pitch, yaw and roll to degrees
-                let pitchDegrees = motion.attitude.pitch * 180 / M_PI
-                let yawDegress = motion.attitude.yaw * 180 / M_PI
-                let rollDegress = motion.attitude.roll * 180 / M_PI
+          //convert the pitch, yaw and roll to degrees
+          let pitchDegrees = motion.attitude.pitch * 180 / M_PI
+          let yawDegress = motion.attitude.yaw * 180 / M_PI
+          let rollDegress = motion.attitude.roll * 180 / M_PI
+            
+          let pitchString = NSString(format: "%.1f", pitchDegrees)
+          let yawString = NSString(format: "%.1f", yawDegress)
+          let rollString = NSString(format: "%.1f", rollDegress)
                 
-                let pitchString = NSString(format: "%.1f", pitchDegrees)
-                let yawString = NSString(format: "%.1f", yawDegress)
-                let rollString = NSString(format: "%.1f", rollDegress)
-                
-                self.pitchLabel.text = pitchString
-                self.yawLabel.text = yawString
-                self.rollLabel.text = rollString
-        })
-    }
+          self.pitchLabel.text = pitchString
+          self.yawLabel.text = yawString
+          self.rollLabel.text = rollString
+     })
+}
 // END motion_func
 
     override func didReceiveMemoryWarning() {

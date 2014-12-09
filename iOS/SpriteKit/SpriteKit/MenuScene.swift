@@ -17,7 +17,8 @@ class MenuScene: SKScene {
         let label = SKLabelNode(text: "Welcome to My Awesome Game")
         label.fontSize = 20
         
-        label.position = CGPoint(x: self.size.width / 2.0, y: self.size.height / 2.0)
+        label.position = CGPoint(x: self.size.width / 2.0,
+                                 y: self.size.height / 2.0)
         
         // BEGIN node_adding_child
         self.addChild(label)
@@ -31,7 +32,8 @@ class MenuScene: SKScene {
         let game = GameScene(size: self.size)
         
         // BEGIN scene_present_transition
-        let transition = SKTransition.moveInWithDirection(.Right, duration: 0.5)
+        let transition = SKTransition.moveInWithDirection(
+            SKTransitionDirection.Right, duration: 0.5)
         
         self.view?.presentScene(game, transition: transition)
         // END scene_present_transition

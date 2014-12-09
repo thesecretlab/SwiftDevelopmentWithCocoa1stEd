@@ -27,6 +27,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             // grabbing a reference to the first controller
             self.myController = controllers[0] as GCController
             
+            // un-set the player number
+            self.myController.playerIndex = GCControllerPlayerIndexUnset
+            
             if ((self.myController.extendedGamepad) != nil)
             {
                 NSLog("This is an extended controller")

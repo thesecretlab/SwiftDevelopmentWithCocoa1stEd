@@ -34,21 +34,11 @@ class GridViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: UICollectionViewDataSource
 
     // BEGIN ios_collectionview_cell_counts
     override func numberOfSectionsInCollectionView
-                                (collectionView: UICollectionView) -> Int {
+                    (collectionView: UICollectionView) -> Int {
         return 1
     }
 
@@ -58,21 +48,21 @@ class GridViewController: UICollectionViewController {
     }
     // END ios_collectionview_cell_counts
 
-    // BEGIN ios_collectionview_cells
-    override func collectionView(collectionView: UICollectionView,
-               cellForItemAtIndexPath indexPath: NSIndexPath)
-                                                        -> UICollectionViewCell
-    {
-        let cell =
-          collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier,
-                                forIndexPath: indexPath) as UICollectionViewCell
+// BEGIN ios_collectionview_cells
+override func collectionView(collectionView: UICollectionView,
+            cellForItemAtIndexPath indexPath: NSIndexPath)
+                                                    -> UICollectionViewCell
+{
+    let cell =
+        collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier,
+                            forIndexPath: indexPath) as UICollectionViewCell
         
-        if let gridCell = cell as? GridCell {
-            gridCell.label.text = String(self.numbers[indexPath.row])
-        }
-    
-        return cell
+    if let gridCell = cell as? GridCell {
+        gridCell.label.text = String(self.numbers[indexPath.row])
     }
+    
+    return cell
+}
     // END ios_collectionview_cells
 
 }

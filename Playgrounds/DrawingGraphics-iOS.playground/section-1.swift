@@ -38,7 +38,10 @@ class ShadowView : UIView {
         var shadowBlurRadius : CGFloat = 5.0
         
         // This function creates and applies the shadow
-        CGContextSetShadowWithColor(context, shadowOffset, shadowBlurRadius, shadow)
+        CGContextSetShadowWithColor(context,
+                                    shadowOffset,
+                                    shadowBlurRadius,
+                                    shadow)
         
         // Draw the path; it will have a shadow
         UIColor.redColor().setFill()
@@ -55,10 +58,12 @@ class ShadowView : UIView {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let context = UIGraphicsGetCurrentContext()
         
-        let gradientStartColor = UIColor(red: 0.1, green: 0.1, blue: 0.8, alpha: 1)
+        let gradientStartColor = UIColor(red: 0.1, green: 0.1, blue: 0.8,
+                                         alpha: 1)
         let gradientEndColor = UIColor(red: 1, green: 0.6, blue: 0.8, alpha: 1)
         
-        let gradientColors : CFArray = [gradientStartColor.CGColor, gradientEndColor.CGColor]
+        let gradientColors : CFArray = [gradientStartColor.CGColor,
+                                        gradientEndColor.CGColor]
         let gradientLocations : [CGFloat] = [0.0, 1.0]
         
         let gradient = CGGradientCreateWithColors(colorSpace,
@@ -71,7 +76,8 @@ class ShadowView : UIView {
         let bottomPoint = CGPointMake(self.bounds.size.width / 2,
             self.bounds.size.height - 20)
         
-        let roundedRectanglePath = UIBezierPath(roundedRect: pathRect, cornerRadius: 4)
+        let roundedRectanglePath = UIBezierPath(roundedRect: pathRect,
+                                                cornerRadius: 4)
 
         CGContextSaveGState(context)
         

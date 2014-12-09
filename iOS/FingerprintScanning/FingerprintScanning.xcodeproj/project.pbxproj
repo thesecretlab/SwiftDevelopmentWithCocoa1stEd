@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6807A5E119CEAFC2005E668D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807A5E019CEAFC2005E668D /* AppDelegate.swift */; };
+		6807A5E319CEAFC2005E668D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807A5E219CEAFC2005E668D /* ViewController.swift */; };
+		6807A5E619CEAFC2005E668D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6807A5E419CEAFC2005E668D /* Main.storyboard */; };
+		6807A5E819CEAFC2005E668D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6807A5E719CEAFC2005E668D /* Images.xcassets */; };
+		6807A5EB19CEAFC2005E668D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6807A5E919CEAFC2005E668D /* LaunchScreen.xib */; };
+		6807A5F719CEAFC2005E668D /* FingerprintScanningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6807A5F619CEAFC2005E668D /* FingerprintScanningTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6807A5F119CEAFC2005E668D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6807A5D319CEAFC2005E668D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6807A5DA19CEAFC2005E668D;
+			remoteInfo = FingerprintScanning;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6807A5DB19CEAFC2005E668D /* FingerprintScanning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingerprintScanning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6807A5DF19CEAFC2005E668D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6807A5E019CEAFC2005E668D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6807A5E219CEAFC2005E668D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6807A5E519CEAFC2005E668D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6807A5E719CEAFC2005E668D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6807A5EA19CEAFC2005E668D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6807A5F019CEAFC2005E668D /* FingerprintScanningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FingerprintScanningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6807A5F519CEAFC2005E668D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6807A5F619CEAFC2005E668D /* FingerprintScanningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerprintScanningTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6807A5D819CEAFC2005E668D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6807A5ED19CEAFC2005E668D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6807A5D219CEAFC2005E668D = {
+			isa = PBXGroup;
+			children = (
+				6807A5DD19CEAFC2005E668D /* FingerprintScanning */,
+				6807A5F319CEAFC2005E668D /* FingerprintScanningTests */,
+				6807A5DC19CEAFC2005E668D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6807A5DC19CEAFC2005E668D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6807A5DB19CEAFC2005E668D /* FingerprintScanning.app */,
+				6807A5F019CEAFC2005E668D /* FingerprintScanningTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6807A5DD19CEAFC2005E668D /* FingerprintScanning */ = {
+			isa = PBXGroup;
+			children = (
+				6807A5E019CEAFC2005E668D /* AppDelegate.swift */,
+				6807A5E219CEAFC2005E668D /* ViewController.swift */,
+				6807A5E419CEAFC2005E668D /* Main.storyboard */,
+				6807A5E719CEAFC2005E668D /* Images.xcassets */,
+				6807A5E919CEAFC2005E668D /* LaunchScreen.xib */,
+				6807A5DE19CEAFC2005E668D /* Supporting Files */,
+			);
+			path = FingerprintScanning;
+			sourceTree = "<group>";
+		};
+		6807A5DE19CEAFC2005E668D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6807A5DF19CEAFC2005E668D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6807A5F319CEAFC2005E668D /* FingerprintScanningTests */ = {
+			isa = PBXGroup;
+			children = (
+				6807A5F619CEAFC2005E668D /* FingerprintScanningTests.swift */,
+				6807A5F419CEAFC2005E668D /* Supporting Files */,
+			);
+			path = FingerprintScanningTests;
+			sourceTree = "<group>";
+		};
+		6807A5F419CEAFC2005E668D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6807A5F519CEAFC2005E668D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6807A5DA19CEAFC2005E668D /* FingerprintScanning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6807A5FA19CEAFC2005E668D /* Build configuration list for PBXNativeTarget "FingerprintScanning" */;
+			buildPhases = (
+				6807A5D719CEAFC2005E668D /* Sources */,
+				6807A5D819CEAFC2005E668D /* Frameworks */,
+				6807A5D919CEAFC2005E668D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FingerprintScanning;
+			productName = FingerprintScanning;
+			productReference = 6807A5DB19CEAFC2005E668D /* FingerprintScanning.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6807A5EF19CEAFC2005E668D /* FingerprintScanningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6807A5FD19CEAFC2005E668D /* Build configuration list for PBXNativeTarget "FingerprintScanningTests" */;
+			buildPhases = (
+				6807A5EC19CEAFC2005E668D /* Sources */,
+				6807A5ED19CEAFC2005E668D /* Frameworks */,
+				6807A5EE19CEAFC2005E668D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6807A5F219CEAFC2005E668D /* PBXTargetDependency */,
+			);
+			name = FingerprintScanningTests;
+			productName = FingerprintScanningTests;
+			productReference = 6807A5F019CEAFC2005E668D /* FingerprintScanningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6807A5D319CEAFC2005E668D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Secret Lab";
+				TargetAttributes = {
+					6807A5DA19CEAFC2005E668D = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 5V2A4389PA;
+					};
+					6807A5EF19CEAFC2005E668D = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 6807A5DA19CEAFC2005E668D;
+					};
+				};
+			};
+			buildConfigurationList = 6807A5D619CEAFC2005E668D /* Build configuration list for PBXProject "FingerprintScanning" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6807A5D219CEAFC2005E668D;
+			productRefGroup = 6807A5DC19CEAFC2005E668D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6807A5DA19CEAFC2005E668D /* FingerprintScanning */,
+				6807A5EF19CEAFC2005E668D /* FingerprintScanningTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6807A5D919CEAFC2005E668D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6807A5E619CEAFC2005E668D /* Main.storyboard in Resources */,
+				6807A5EB19CEAFC2005E668D /* LaunchScreen.xib in Resources */,
+				6807A5E819CEAFC2005E668D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6807A5EE19CEAFC2005E668D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6807A5D719CEAFC2005E668D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6807A5E319CEAFC2005E668D /* ViewController.swift in Sources */,
+				6807A5E119CEAFC2005E668D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6807A5EC19CEAFC2005E668D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6807A5F719CEAFC2005E668D /* FingerprintScanningTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6807A5F219CEAFC2005E668D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6807A5DA19CEAFC2005E668D /* FingerprintScanning */;
+			targetProxy = 6807A5F119CEAFC2005E668D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6807A5E419CEAFC2005E668D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6807A5E519CEAFC2005E668D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6807A5E919CEAFC2005E668D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6807A5EA19CEAFC2005E668D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6807A5F819CEAFC2005E668D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6807A5F919CEAFC2005E668D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6807A5FB19CEAFC2005E668D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = FingerprintScanning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6807A5FC19CEAFC2005E668D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = FingerprintScanning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6807A5FE19CEAFC2005E668D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FingerprintScanningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FingerprintScanning.app/FingerprintScanning";
+			};
+			name = Debug;
+		};
+		6807A5FF19CEAFC2005E668D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FingerprintScanningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FingerprintScanning.app/FingerprintScanning";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6807A5D619CEAFC2005E668D /* Build configuration list for PBXProject "FingerprintScanning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6807A5F819CEAFC2005E668D /* Debug */,
+				6807A5F919CEAFC2005E668D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6807A5FA19CEAFC2005E668D /* Build configuration list for PBXNativeTarget "FingerprintScanning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6807A5FB19CEAFC2005E668D /* Debug */,
+				6807A5FC19CEAFC2005E668D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6807A5FD19CEAFC2005E668D /* Build configuration list for PBXNativeTarget "FingerprintScanningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6807A5FE19CEAFC2005E668D /* Debug */,
+				6807A5FF19CEAFC2005E668D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6807A5D319CEAFC2005E668D /* Project object */;
+}

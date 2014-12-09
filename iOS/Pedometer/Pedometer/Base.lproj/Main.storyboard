@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pedometer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps taken in last day:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-8Z-WHj">
+                                <rect key="frame" x="211" y="246" width="179" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9f-jE-tLc">
+                                <rect key="frame" x="281" y="275" width="38.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps taken since app start:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dg5-Ue-COs">
+                                <rect key="frame" x="193" y="303" width="215" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uns-r9-ra5">
+                                <rect key="frame" x="281.5" y="332" width="38.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uns-r9-ra5" firstAttribute="top" secondItem="Dg5-Ue-COs" secondAttribute="bottom" constant="8" id="2Gr-RC-yIS"/>
+                            <constraint firstItem="E9f-jE-tLc" firstAttribute="top" secondItem="WB1-8Z-WHj" secondAttribute="bottom" constant="8" id="EYN-ps-EZ8"/>
+                            <constraint firstItem="uns-r9-ra5" firstAttribute="centerX" secondItem="Dg5-Ue-COs" secondAttribute="centerX" id="IuJ-YF-1hk"/>
+                            <constraint firstItem="E9f-jE-tLc" firstAttribute="centerX" secondItem="WB1-8Z-WHj" secondAttribute="centerX" id="ZQL-WW-NNe"/>
+                            <constraint firstAttribute="centerY" secondItem="WB1-8Z-WHj" secondAttribute="centerY" constant="43.5" id="apn-MH-kTb"/>
+                            <constraint firstItem="Dg5-Ue-COs" firstAttribute="top" secondItem="E9f-jE-tLc" secondAttribute="bottom" constant="8" id="piN-Tv-ZLB"/>
+                            <constraint firstAttribute="centerX" secondItem="WB1-8Z-WHj" secondAttribute="centerX" constant="-0.5" id="pma-UT-Q5P"/>
+                            <constraint firstItem="E9f-jE-tLc" firstAttribute="centerX" secondItem="Dg5-Ue-COs" secondAttribute="centerX" id="tUa-Mh-cw6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stepsSinceAppStartLabel" destination="uns-r9-ra5" id="rPR-Cc-K8A"/>
+                        <outlet property="stepsSinceLastDayLabel" destination="E9f-jE-tLc" id="JVe-Zq-xvj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

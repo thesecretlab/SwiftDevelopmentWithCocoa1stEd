@@ -12,7 +12,10 @@ let notificationCenter = NSNotificationCenter.defaultCenter()
 let operationQueue = NSOperationQueue.mainQueue()
 
 // Register for the notification UIApplicationDidEnterBackgroundNotification
-let applicationDidEnterBackgroundObserver = notificationCenter.addObserverForName(UIApplicationDidEnterBackgroundNotification, object: nil, queue: operationQueue) {
+let applicationDidEnterBackgroundObserver = 
+    notificationCenter.addObserverForName(
+        UIApplicationDidEnterBackgroundNotification, 
+        object: nil, queue: operationQueue) {
     
     (notification: NSNotification!) in
     

@@ -52,7 +52,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSNetServiceDelegate,
         println("Resolved address for service \(sender): \(serviceURL)")
     }
     
-    func netService(sender: NSNetService, didNotResolve errorDict: NSDictionary) {
+    func netService(sender: NSNetService,
+                            didNotResolve errorDict: NSDictionary) {
         println("Couldn't resolve address for service \(sender), \(errorDict)")
     }
 }

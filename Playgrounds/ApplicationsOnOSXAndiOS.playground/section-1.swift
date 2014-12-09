@@ -4,14 +4,14 @@ import UIKit
 
 // BEGIN bundle_path
 let resourcePath = NSBundle.mainBundle()
-    .pathForResource("SomeImage", ofType: "png")
+    .pathForResource("SomeFile", ofType: "txt")
 // resourcePath is now a string containing the
-// absolute path reference to SomeImage.png, or nil
+// absolute path reference to SomeFile.txt, or nil
 // END bundle_path
 
 // BEGIN bundle_url
 let resourceURL = NSBundle.mainBundle()
-    .URLForResource("SomeImage", withExtension: "png")
+    .URLForResource("SomeFile", withExtension: "txt")
 // resourceURL is now an NSURL, or nil
 // END bundle_url
 
@@ -75,7 +75,7 @@ func application(application: UIApplication,
             return
         }
         
-        // This is a very simple check - your application would 
+        // This is a very simple check—your application would 
         // do something more involved, like compare this data against
         // the most recently downloaded data to determine if it's 'new'
         if data?.length > 0 {

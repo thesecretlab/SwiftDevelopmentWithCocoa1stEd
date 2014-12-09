@@ -30,7 +30,7 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate,
         self.session = MCSession(peer: peerID)
         self.session.delegate = self
         
-        // create the browser viewcontroller with a unique service name
+        // create the browser view controller with a unique service name
         self.browser = MCBrowserViewController(serviceType:serviceType,
             session:self.session)
         
@@ -91,7 +91,7 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate,
     
     func browserViewControllerDidFinish(
         browserViewController: MCBrowserViewController!)  {
-        // Called when the browser view controller is dismissed (ie the Done 
+        // Called when the browser view controller is dismissed (i.e., the Done
         // button was tapped)
         
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -111,9 +111,10 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate,
         // This needs to run on the main queue
         dispatch_async(dispatch_get_main_queue()) {
             
-            var msg = NSString(data: data, encoding: NSUTF8StringEncoding)
+            if let msg = NSString(data: data, encoding: NSUTF8StringEncoding) {
+                self.updateChat(msg, fromPeer: peerID)
+            }
             
-            self.updateChat(msg, fromPeer: peerID)
         }
     }
     
@@ -140,7 +141,7 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate,
     
     func session(session: MCSession!, peer peerID: MCPeerID!,
         didChangeState state: MCSessionState)  {
-        // Called when a connected peer changes state (for example, goes offline)
+        // Called when a connected peer changes state (e.g., if it goes offline)
 
     }
 

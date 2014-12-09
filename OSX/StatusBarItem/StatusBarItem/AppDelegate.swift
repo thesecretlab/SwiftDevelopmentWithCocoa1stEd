@@ -23,11 +23,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
         
         // BEGIN statusitem-explanation
-        // Make a status bar that has variable length (as opposed to being a standard square size)
+        // Make a status bar that has variable length
+        // (as opposed to being a standard square size)
         
-        // This -1 should be 'NSVariableStatusItemLength' instead, but causes a link error
-        // PRODUCTION: Remind authors to check this before we leave early release - it may be fixed by Apple by then.
-        
+        // -1 to indicate "variable length"
         statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
         
         // Set the text that appears in the menu bar
@@ -36,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Set the menu that should appear when the item is clicked
         statusItem.menu = self.menu
         
-        // Set if the item should change colour when clicked
+        // Set if the item should change color when clicked
         statusItem.highlightMode = true
         // END statusitem-explanation
         

@@ -18,12 +18,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.textView.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.textView.font =
+            UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         
         
-        observer = NSNotificationCenter.defaultCenter().addObserverForName(UIContentSizeCategoryDidChangeNotification, object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { (notification) in
+        observer = NSNotificationCenter.defaultCenter()
+            .addObserverForName(UIContentSizeCategoryDidChangeNotification,
+                object: nil, queue: NSOperationQueue.mainQueue(),
+                usingBlock: { (notification) in
             
-            self.textView.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.textView.font =
+            UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
             
         })
     }

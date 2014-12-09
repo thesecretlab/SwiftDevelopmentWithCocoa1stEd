@@ -16,7 +16,7 @@ fileManager.delegate = self
 // END filemanager_with_delegate
 */
 
-
+if(true) {
 // BEGIN listing_directory
 let folderURL = NSURL.fileURLWithPath("/Applications/")
 
@@ -43,14 +43,17 @@ let attributesDictionary = anURL.resourceValuesForKeys(attributes, error: nil)
 let fileSizeInBytes = attributesDictionary?[NSURLFileSizeKey] as NSNumber
 
 // And the date it was last modified:
-let lastModifiedDate = attributesDictionary?[NSURLContentModificationDateKey] as NSDate
+let lastModifiedDate =
+    attributesDictionary?[NSURLContentModificationDateKey] as NSDate
 // END getting_file_info
-
+}
 /*
 // BEGIN prefetching_attributes
-let attributes = [NSURLFileSizeKey, NSURLContentModificationDateKey]
-fileManager.contentsOfDirectoryAtURL(folderURL, includingPropertiesForKeys:
-    attributes, options: NSDirectoryEnumerationOptions(), error: nil)
+let attributes = 
+    [NSURLFileSizeKey, NSURLContentModificationDateKey]
+fileManager.contentsOfDirectoryAtURL(folderURL,
+    includingPropertiesForKeys: attributes,
+    options: NSDirectoryEnumerationOptions(), error: nil)
 // END prefetching_attributes
 */
 
@@ -62,13 +65,14 @@ let temporaryDirectoryPath = NSTemporaryDirectory()
 let newDirectoryURL  = NSURL.fileURLWithPath(temporaryDirectoryPath +
     "/MyNewDirectory")
 
+var error : NSError? = nil
 var didCreate = fileManager.createDirectoryAtURL(newDirectoryURL!,
-    withIntermediateDirectories: false, attributes: nil, error: nil)
+    withIntermediateDirectories: false, attributes: nil, error: &error)
 if (didCreate) {
     // The directory was successfully created
 } else {
     // The directory wasn't created (maybe one already exists at the path?)
-    // Pass an NSError to createDirectoryAtURL to get more info
+    // More information is stored in the 'error' variable
 }
 // END creating_directory
 
@@ -152,11 +156,11 @@ let loadedBookmarkData = NSData(contentsOfURL: bookmarkStorageURL)
 
 var loadedBookmark : NSURL? = nil
 
-if loadedBookmarkData.length > 0 {
+if loadedBookmarkData?.length > 0 {
     var isStale = false
     var error : NSError? = nil
     
-    loadedBookmark = NSURL.URLByResolvingBookmarkData(loadedBookmarkData,
+    loadedBookmark = NSURL(byResolvingBookmarkData:loadedBookmarkData!,
         options: NSURLBookmarkResolutionOptions.WithSecurityScope,
         relativeToURL: nil, bookmarkDataIsStale: nil, error: nil)
     

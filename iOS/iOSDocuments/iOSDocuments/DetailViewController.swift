@@ -21,6 +21,7 @@ class DetailViewController: UIViewController, UITextViewDelegate {
                 (success) in
                 
                 self.navigationController?.popViewControllerAnimated(true)
+                
                 return
             }
         }
@@ -41,6 +42,7 @@ class DetailViewController: UIViewController, UITextViewDelegate {
     func textViewDidChange(textView: UITextView!) {
         if let document : SampleDocument = self.detailItem {
             document.text = self.textView.text
+            document.updateChangeCount(UIDocumentChangeKind.Done)
         }
     }
 

@@ -3,12 +3,10 @@
 import UIKit
 import AVFoundation
 
-"/Users/McJones/Development/Orallyman Code/TestVideo.m4v"
-
 // ------
 // loading content into player
 // BEGIN av_loading
-let contentURL = NSURL(fileURLWithPath:"/location/to/AVFile.m4v")
+let contentURL = NSURL(fileURLWithPath:"/Users/jon/Desktop/AVFile.m4v")
 let player = AVPlayer(URL: contentURL)
 // END av_loading
 

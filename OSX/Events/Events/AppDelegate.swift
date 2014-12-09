@@ -17,11 +17,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var date : NSDate = NSDate() {
         willSet {
             // Convert the provided date to one at midnight on the same day
-            var dateComponents = NSCalendar.currentCalendar().components(NSCalendarUnit.DayCalendarUnit |
-                                                                         NSCalendarUnit.MonthCalendarUnit |
-                                                                         NSCalendarUnit.YearCalendarUnit, fromDate: newValue)
+            var dateComponents = 
+    NSCalendar.currentCalendar().components(NSCalendarUnit.DayCalendarUnit |
+    NSCalendarUnit.MonthCalendarUnit |
+    NSCalendarUnit.YearCalendarUnit, fromDate: newValue)
             
-            if let dateResult = NSCalendar.currentCalendar().dateFromComponents(dateComponents) {
+            if let dateResult = 
+            NSCalendar.currentCalendar().dateFromComponents(dateComponents) {
                 self.date = dateResult
             }
             
@@ -32,7 +34,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // BEGIN property_calendars
     var calendars : [EKCalendar] {
     get {
-        return self.store.calendarsForEntityType(EKEntityTypeEvent) as [EKCalendar];
+        return self.store.calendarsForEntityType(EKEntityTypeEvent) 
+        as [EKCalendar];
     }
     }
     // END property_calendars
@@ -42,7 +45,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     get {
         var endDate = date.dateByAddingTimeInterval(24 * 60 * 60)
         
-        var predicate = self.store.predicateForEventsWithStartDate(self.date, endDate: endDate, calendars: self.calendars)
+        var predicate = 
+        self.store.predicateForEventsWithStartDate(self.date, 
+        endDate: endDate, calendars: self.calendars)
         
         return self.store.eventsMatchingPredicate(predicate) as [EKEvent]
     }

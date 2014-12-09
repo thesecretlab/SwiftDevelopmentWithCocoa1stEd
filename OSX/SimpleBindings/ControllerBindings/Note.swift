@@ -11,7 +11,7 @@ import Cocoa
 // BEGIN note_class
 class Note: NSObject {
     
-    // Created date is a constant - it's set upon creation, and never changes
+    // Created date is a constant—it's set upon creation, and never changes
     var created : NSDate = NSDate()
     
     // Edited date defaults to the current date

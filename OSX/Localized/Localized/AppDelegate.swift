@@ -17,14 +17,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
         
-        /*
-        // BEGIN did_finish_launching
-        let languageFormat = NSLocalizedString("today's date: %@", 
-                                       comment:"shows today's date")
+    /*
+    // BEGIN did_finish_launching
+    let languageFormat = NSLocalizedString("today's date: %@",
+                                    comment:"shows today's date")
         
-        self.dateLabel.stringValue = String(format: languageFormat, NSDate())
-        // END did_finish_launching
-        */
+    self.dateLabel.stringValue = String(format: languageFormat, NSDate())
+    // END did_finish_launching
+    */
         
         // BEGIN did_finish_launching_with_date
         let languageFormat = NSLocalizedString("today's date: %@",

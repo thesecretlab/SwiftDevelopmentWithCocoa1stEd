@@ -13,7 +13,7 @@ You can email us at [lab@secretlab.com.au](mailto:lab@secretlab.com.au)
 ## Notes
 This repository is up to date with Xcode 6.3 and Swift 1.2. More info on the [Secret Lab blog](http://www.secretlab.com.au/blog/swift-development-with-cocoa-addendum).
 
-If you want the code that shipped with the published book, targeting Xcode 6.0 and Swift 1.0, you can find it [in a past commit here](http://www.secretlab.com.au/blog/swift-development-with-cocoa-addendum).
+If you want the code that shipped with the published book, targeting Xcode 6.0 and Swift 1.0, you can find it [in a past commit here](https://github.com/thesecretlab/SwiftDevelopmentWithCocoa1stEd/tree/aac9af63a7d3c2f37db672582bac4b0354ab57bd).
 
 ## License
 

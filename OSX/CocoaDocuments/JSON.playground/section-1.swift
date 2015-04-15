@@ -17,7 +17,7 @@ let serializedData = NSJSONSerialization.dataWithJSONObject(dictionary,
 
 // BEGIN json_loading_example
 let loadedDictionary =
-    NSJSONSerialization.JSONObjectWithData(serializedData,
+    NSJSONSerialization.JSONObjectWithData(serializedData!,
         options: NSJSONReadingOptions(), error: &error) as? [String:Int]
 
 // loadedDictionary is now either a dictionary that maps

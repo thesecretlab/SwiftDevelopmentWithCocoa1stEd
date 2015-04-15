@@ -304,7 +304,7 @@ countUp // = 5
 // BEGIN if_let
 var conditionalString : String? = "a string"
 
-if let theString = conditionalString? {
+if let theString = conditionalString {
     println("The string is '\(theString)'")
 } else {
     println("The string is nil")
@@ -992,7 +992,7 @@ extension InitAndDeinitExample {
 }
 
 // BEGIN init_failable_example
-let failableExample = InitAndDeinitExample(value: 6)
+var failableExample = InitAndDeinitExample(value: 6)
 // = nil
 // END init_failable_example
 
@@ -1042,7 +1042,7 @@ reversedString // = "olleH"
 
 // You can get the number of characters in a string
 // BEGIN counting_elements_in_string
-countElements("Hello") // = 5
+count("Hello") // = 5
 // END counting_elements_in_string
 
 

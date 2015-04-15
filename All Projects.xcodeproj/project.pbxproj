@@ -787,12 +787,40 @@
 		68F23B941ADE35B000721D58 /* TextKitDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TextKitDemo.xcodeproj; path = iOS/TextKitDemo/TextKitDemo.xcodeproj; sourceTree = "<group>"; };
 		68F23B971ADE35B000721D58 /* VideoPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VideoPlayer.xcodeproj; path = OSX/VideoPlayer/VideoPlayer.xcodeproj; sourceTree = "<group>"; };
 		68F23B9A1ADE35B000721D58 /* VideoPlayerWithAVKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VideoPlayerWithAVKit.xcodeproj; path = OSX/VideoPlayerWithAVKit/VideoPlayerWithAVKit.xcodeproj; sourceTree = "<group>"; };
+		68F23CD51ADE4B4A00721D58 /* ApplicationsOnOSXAndiOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ApplicationsOnOSXAndiOS.playground; path = Playgrounds/ApplicationsOnOSXAndiOS.playground; sourceTree = "<group>"; };
+		68F23CD61ADE4B4A00721D58 /* AVFoundationPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = AVFoundationPlayground.playground; path = Playgrounds/AVFoundationPlayground.playground; sourceTree = "<group>"; };
+		68F23CD71ADE4B4A00721D58 /* ClosuresAndOperationQueues.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ClosuresAndOperationQueues.playground; path = Playgrounds/ClosuresAndOperationQueues.playground; sourceTree = "<group>"; };
+		68F23CD81ADE4B4A00721D58 /* DrawingGraphics-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "DrawingGraphics-iOS.playground"; path = "Playgrounds/DrawingGraphics-iOS.playground"; sourceTree = "<group>"; };
+		68F23CD91ADE4B4A00721D58 /* DrawingGraphicsInView.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = DrawingGraphicsInView.playground; path = Playgrounds/DrawingGraphicsInView.playground; sourceTree = "<group>"; };
+		68F23CDA1ADE4B4A00721D58 /* Filesystem.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Filesystem.playground; path = Playgrounds/Filesystem.playground; sourceTree = "<group>"; };
+		68F23CDB1ADE4B4A00721D58 /* iOSSharing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = iOSSharing.playground; path = "Cross-Platform/Sharing/iOSSharing/iOSSharing.playground"; sourceTree = "<group>"; };
+		68F23CDC1ADE4B4B00721D58 /* JSON.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = JSON.playground; path = OSX/CocoaDocuments/JSON.playground; sourceTree = "<group>"; };
+		68F23CDD1ADE4B4B00721D58 /* KeyValueCodingAndObserving.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = KeyValueCodingAndObserving.playground; path = Playgrounds/KeyValueCodingAndObserving.playground; sourceTree = "<group>"; };
+		68F23CDE1ADE4B4B00721D58 /* Networking.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Networking.playground; path = OSX/Networking/Networking.playground; sourceTree = "<group>"; };
+		68F23CDF1ADE4B4B00721D58 /* NumberFormatters.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = NumberFormatters.playground; path = Playgrounds/NumberFormatters.playground; sourceTree = "<group>"; };
+		68F23CE01ADE4B4B00721D58 /* OSXSharing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = OSXSharing.playground; path = "Cross-Platform/Sharing/OSXSharing/OSXSharing.playground"; sourceTree = "<group>"; };
+		68F23CE11ADE4B4B00721D58 /* PreferencesAndNotifications.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = PreferencesAndNotifications.playground; path = Playgrounds/PreferencesAndNotifications.playground; sourceTree = "<group>"; };
+		68F23CE21ADE4B4B00721D58 /* TheSwiftLanguage.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = TheSwiftLanguage.playground; path = Playgrounds/TheSwiftLanguage.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		68F23B031ADE355700721D58 = {
 			isa = PBXGroup;
 			children = (
+				68F23CD51ADE4B4A00721D58 /* ApplicationsOnOSXAndiOS.playground */,
+				68F23CD61ADE4B4A00721D58 /* AVFoundationPlayground.playground */,
+				68F23CD71ADE4B4A00721D58 /* ClosuresAndOperationQueues.playground */,
+				68F23CD81ADE4B4A00721D58 /* DrawingGraphics-iOS.playground */,
+				68F23CD91ADE4B4A00721D58 /* DrawingGraphicsInView.playground */,
+				68F23CDA1ADE4B4A00721D58 /* Filesystem.playground */,
+				68F23CDB1ADE4B4A00721D58 /* iOSSharing.playground */,
+				68F23CDC1ADE4B4B00721D58 /* JSON.playground */,
+				68F23CDD1ADE4B4B00721D58 /* KeyValueCodingAndObserving.playground */,
+				68F23CDE1ADE4B4B00721D58 /* Networking.playground */,
+				68F23CDF1ADE4B4B00721D58 /* NumberFormatters.playground */,
+				68F23CE01ADE4B4B00721D58 /* OSXSharing.playground */,
+				68F23CE11ADE4B4B00721D58 /* PreferencesAndNotifications.playground */,
+				68F23CE21ADE4B4B00721D58 /* TheSwiftLanguage.playground */,
 				68F23B0A1ADE35AC00721D58 /* Altimeter.xcodeproj */,
 				68F23B0D1ADE35AC00721D58 /* AppNap.xcodeproj */,
 				68F23B101ADE35AC00721D58 /* AVAudioPlayer.xcodeproj */,

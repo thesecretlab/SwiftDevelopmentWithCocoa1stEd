@@ -27,7 +27,7 @@ let folderContents = fileManager.contentsOfDirectoryAtURL(folderURL!,
     error:&error)
 // END listing_directory
 
-let anURL = folderContents?[0] as NSURL
+let anURL = folderContents?[0] as! NSURL
 
 // BEGIN getting_file_info
 // anURL is an NSURL object
@@ -40,11 +40,11 @@ let attributes = [NSURLFileSizeKey, NSURLContentModificationDateKey]
 let attributesDictionary = anURL.resourceValuesForKeys(attributes, error: nil)
 
 // We can now get the file size out of the dictionary:
-let fileSizeInBytes = attributesDictionary?[NSURLFileSizeKey] as NSNumber
+let fileSizeInBytes = attributesDictionary?[NSURLFileSizeKey] as! NSNumber
 
 // And the date it was last modified:
 let lastModifiedDate =
-    attributesDictionary?[NSURLContentModificationDateKey] as NSDate
+    attributesDictionary?[NSURLContentModificationDateKey] as! NSDate
 // END getting_file_info
 }
 /*
@@ -107,7 +107,7 @@ fileManager.removeItemAtURL(newFileURL!, error: nil)
 
 // BEGIN getting_document_directory
 let URLs = fileManager.URLsForDirectory(NSSearchPathDirectory.DocumentDirectory,
-    inDomains: NSSearchPathDomainMask.UserDomainMask) as [NSURL]
+    inDomains: NSSearchPathDomainMask.UserDomainMask) as! [NSURL]
 
 let documentURL = URLs[0]
 // END getting_document_directory

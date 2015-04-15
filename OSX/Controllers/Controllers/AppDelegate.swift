@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var myController = GCController()
 
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
 // ------
 // controller input handling
@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if (controllers.count != 0)
         {
             // grabbing a reference to the first controller
-            self.myController = controllers[0] as GCController
+            self.myController = controllers[0] as! GCController
             
             // un-set the player number
             self.myController.playerIndex = GCControllerPlayerIndexUnset
@@ -48,9 +48,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
                 profile.leftTrigger.valueChangedHandler =
                     {(  input:GCControllerButtonInput!,
-                        value:Float!,
-                      pressed:Bool!) -> Void in
-                        if((pressed) != nil)
+                        value:Float,
+                      pressed:Bool) -> Void in
+                        if(pressed == true)
                         {
                             NSLog("left trigger pressed")
                         }
@@ -68,7 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 // END controller_input
     }
 
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 

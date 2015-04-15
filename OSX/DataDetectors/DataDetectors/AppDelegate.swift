@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var inputTextField: NSTextField!
 
     @IBOutlet weak var outputTextField: NSTextField!
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
     }
 
@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var resultsText = ""
         
         if let matches = detector?.matchesInString(inputString, options: nil,
-            range: NSMakeRange(0, countElements(inputString))) {
+            range: NSMakeRange(0, count(inputString))) {
                 
             for match in matches {
                 
@@ -64,7 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     // END data_detector_code
     
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 

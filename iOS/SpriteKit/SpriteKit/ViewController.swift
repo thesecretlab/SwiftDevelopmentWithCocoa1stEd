@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         
         let menuScene = MenuScene(size: self.view.bounds.size)
         
-        let skView = self.view as SKView
+        let skView = self.view as! SKView
         
         menuScene.scaleMode = .AspectFill
         skView.presentScene(menuScene)

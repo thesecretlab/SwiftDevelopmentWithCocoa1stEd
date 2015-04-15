@@ -54,29 +54,29 @@ class AppDelegate: NSObject, NSApplicationDelegate,
     // END osx_tableviews_setup
     
     // BEGIN osx_tableview_rows
-    func numberOfRowsInTableView(tableView: NSTableView!) -> Int {
+    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
         return self.songs.count
     }
     // END osx_tableview_rows
     
     // BEGIN osx_tableview_cells
-    func tableView(tableView: NSTableView!, viewForTableColumn
-                 tableColumn: NSTableColumn!, row: Int) -> NSView!  {
+    func tableView(tableView: NSTableView, viewForTableColumn
+                 tableColumn: NSTableColumn?, row: Int) -> NSView?  {
         
         let cell =
-                    tableView.makeViewWithIdentifier(tableColumn.identifier,
-                        owner: self) as NSTableCellView
+                    tableView.makeViewWithIdentifier(tableColumn!.identifier,
+                        owner: self) as! NSTableCellView
         
         let textField = cell.textField
         let song = self.songs[row]
         
-        if tableColumn.identifier == "Title" {
+        if tableColumn!.identifier == "Title" {
             textField?.stringValue = song.title
-        } else if tableColumn.identifier == "Duration" {
+        } else if tableColumn!.identifier == "Duration" {
             let durationText = NSString(format: "%i:%02i",
                                         Int(song.duration) / 60,
                                         Int(song.duration) % 60)
-            textField?.stringValue = durationText
+            textField?.stringValue = durationText as String
         }
         
         return cell
@@ -84,13 +84,13 @@ class AppDelegate: NSObject, NSApplicationDelegate,
     // END osx_tableview_cells
     
     // BEGIN osx_tableview_sorting
-    func tableView(tableView: NSTableView!,
-                    sortDescriptorsDidChange oldDescriptors: [AnyObject]!)  {
+    func tableView(tableView: NSTableView,
+                    sortDescriptorsDidChange oldDescriptors: [AnyObject])  {
         
         // Apply each sort descriptor, in reverse order 
                         
         for sortDescriptor in tableView.sortDescriptors.reverse()
-            as [NSSortDescriptor] {
+            as! [NSSortDescriptor] {
             songs.sort() {
                 (item1, item2) in
                 return sortDescriptor.compareObject(item1, toObject: item2)
@@ -102,11 +102,11 @@ class AppDelegate: NSObject, NSApplicationDelegate,
     }
     // END osx_tableview_sorting
     
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
     }
 
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 

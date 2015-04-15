@@ -43,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var window: NSWindow!
 
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         
         // BEGIN icloud_ubiquitycontainer
         // We run this on a new background queue because it might take some time
@@ -115,7 +115,7 @@ metadataQuery.startQuery()
             if let metadataItem = item as? NSMetadataItem {
                 let url =
                     metadataItem
-                        .valueForAttribute(NSMetadataItemURLKey) as NSURL
+                        .valueForAttribute(NSMetadataItemURLKey) as! NSURL
                 urls.append(url)
             }
             
@@ -142,7 +142,7 @@ metadataQuery.startQuery()
                 if let sourceURL = panel.URL {
                     let destinationURL = containerURL?
                         .URLByAppendingPathComponent(
-                            sourceURL.lastPathComponent)
+                            sourceURL.lastPathComponent!)
                     
                     var error : NSError?
                     
@@ -164,7 +164,7 @@ metadataQuery.startQuery()
     }
     // END ubiq_add_file
 
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 

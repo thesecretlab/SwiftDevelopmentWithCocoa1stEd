@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.sharedApplication().terminate(nil)
     }
     
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         
         // BEGIN statusitem-explanation
         // Make a status bar that has variable length

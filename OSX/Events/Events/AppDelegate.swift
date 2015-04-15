@@ -35,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var calendars : [EKCalendar] {
     get {
         return self.store.calendarsForEntityType(EKEntityTypeEvent) 
-        as [EKCalendar];
+        as! [EKCalendar];
     }
     }
     // END property_calendars
@@ -49,7 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.store.predicateForEventsWithStartDate(self.date, 
         endDate: endDate, calendars: self.calendars)
         
-        return self.store.eventsMatchingPredicate(predicate) as [EKEvent]
+        return self.store.eventsMatchingPredicate(predicate) as! [EKEvent]
     }
     }
     // END property_events
@@ -57,7 +57,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // BEGIN property_eventstore
     lazy var store : EKEventStore = EKEventStore()
     
-    func applicationDidFinishLaunching(notification: NSNotification!)  {
+    func applicationDidFinishLaunching(notification: NSNotification)  {
         self.store.requestAccessToEntityType(EKEntityTypeEvent) {
             (success: Bool, error: NSError!) in
             println("Got permission = \(success); error = \(error)")

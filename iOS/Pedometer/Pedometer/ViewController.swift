@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         // and 2. one day ago
         let calendar = NSCalendar.currentCalendar()
         let now = NSDate()
-        let oneDayAgo = calendar.dateByAddingUnit(NSCalendarUnit.DayCalendarUnit,
+        let oneDayAgo = calendar.dateByAddingUnit(NSCalendarUnit.CalendarUnitDay,
                                                   value: -1,
                                                   toDate: now,
                                                   options: NSCalendarOptions())

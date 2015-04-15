@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     var audioPlayer = AVAudioPlayer()
 
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
 // ------
 // setting up the audio player
 // BEGIN audio_setup
@@ -44,7 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 // END audio_play
     }
 
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 

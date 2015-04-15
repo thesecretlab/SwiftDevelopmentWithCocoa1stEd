@@ -27,7 +27,7 @@ var player: AVPlayer?
 // ------
 // adding the player content to the view
 // BEGIN video_setup
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         let contentURL = NSBundle.mainBundle().URLForResource("TestVideo",
             withExtension: "m4v")
         player = AVPlayer(URL: contentURL)
@@ -43,7 +43,7 @@ var player: AVPlayer?
 // END video_setup
     }
 
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 // ------

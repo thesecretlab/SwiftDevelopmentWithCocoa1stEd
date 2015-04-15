@@ -22,7 +22,7 @@ class ViewController: UIViewController,UITableViewDelegate,
     // END queue_property
     
     // BEGIN table_view_stuff
-    func numberOfSectionsInTableView(tableView: UITableView!) -> Int  {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int  {
         return 1
     }
     
@@ -37,7 +37,7 @@ func tableView(tableView: UITableView,
     cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell  {
         
     var cell = tableView.dequeueReusableCellWithIdentifier("FaviconCell")
-                                                as FaviconTableViewCell
+                                                as! FaviconTableViewCell
         
     var host = hosts[indexPath.row]
     var url = NSURL(string: "http://\(host)/favicon.ico")

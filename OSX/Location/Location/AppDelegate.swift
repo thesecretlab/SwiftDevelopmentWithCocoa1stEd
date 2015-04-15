@@ -26,14 +26,14 @@ class AppDelegate: NSObject, NSApplicationDelegate,CLLocationManagerDelegate {
 // ------
 // Location applicationDidFinish
 // BEGIN location_applicationDidFinishLaunching
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         self.spinner.startAnimation(nil)
     }
 // END location_applicationDidFinishLaunching
 
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
     
@@ -46,11 +46,11 @@ class AppDelegate: NSObject, NSApplicationDelegate,CLLocationManagerDelegate {
         // collecting the most recent location from the array of locations
         if let newLocation = locations.last as? CLLocation
         {
-            self.longitudeLabel.stringValue = NSString(format: "%.2f",
+            self.longitudeLabel.stringValue = String(format: "%.2f",
                 newLocation.coordinate.longitude)
-            self.latitudeLabel.stringValue = NSString(format: "%.2f",
+            self.latitudeLabel.stringValue = String(format: "%.2f",
                 newLocation.coordinate.latitude)
-            self.accuracyLabel.stringValue = NSString(format: "%.1fm",
+            self.accuracyLabel.stringValue = String(format: "%.1fm",
                 newLocation.horizontalAccuracy)
             self.spinner.stopAnimation(nil);
         }

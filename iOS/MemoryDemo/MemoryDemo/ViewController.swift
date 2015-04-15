@@ -151,7 +151,7 @@ func updatePages() {
 // END update_pages
 
 // BEGIN scrollview_did_scroll
-func scrollViewDidScroll(scrollView: UIScrollView!)  {
+func scrollViewDidScroll(scrollView: UIScrollView)  {
     self.updatePages()
 }
 // END scrollview_did_scroll

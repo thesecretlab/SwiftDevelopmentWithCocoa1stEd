@@ -28,7 +28,7 @@ class MenuScene: SKScene {
     // END transition_menu_setup
     
     // BEGIN transition_menu_touch
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         let game = GameScene(size: self.size)
         
         // BEGIN scene_present_transition

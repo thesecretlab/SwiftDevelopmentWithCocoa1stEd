@@ -71,7 +71,7 @@ class GameScene: SKScene {
         // END texture_atlas
         
         // BEGIN texture_atlas_listing
-        let textureNames = atlas.textureNames as [String]
+        let textureNames = atlas.textureNames as! [String]
         // END texture_atlas_listing
         
         // BEGIN node_removing
@@ -83,9 +83,9 @@ class GameScene: SKScene {
         // END text_creating
         
         // BEGIN text_finding_fonts
-        for familyName in UIFont.familyNames() as [String] {
+        for familyName in UIFont.familyNames() as! [String] {
             for fontName in UIFont.fontNamesForFamilyName(familyName)
-                as [String] {
+                as! [String] {
                 println(fontName)
             }
         }

@@ -39,7 +39,7 @@ class DetailViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    func textViewDidChange(textView: UITextView!) {
+    func textViewDidChange(textView: UITextView) {
         if let document : SampleDocument = self.detailItem {
             document.text = self.textView.text
             document.updateChangeCount(UIDocumentChangeKind.Done)

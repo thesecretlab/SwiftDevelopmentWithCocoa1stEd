@@ -45,7 +45,7 @@ class ViewController: UIViewController, NSUserActivityDelegate {
     override func restoreUserActivityState(activity: NSUserActivity) {
         
         if activity.activityType == "com.oreilly.Handoffs.switches" {
-            let userInfo = activity.userInfo as [String : Bool]
+            let userInfo = activity.userInfo as! [String : Bool]
             
             switch1.on = userInfo["switch1"] as Bool!
             switch2.on = userInfo["switch2"] as Bool!

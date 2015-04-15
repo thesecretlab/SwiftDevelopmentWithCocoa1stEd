@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var dateLabel: NSTextField!
     
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         
     /*
     // BEGIN did_finish_launching
@@ -51,7 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
 
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 

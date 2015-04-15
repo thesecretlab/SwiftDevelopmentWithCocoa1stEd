@@ -26,7 +26,7 @@ class SampleDocument: UIDocument {
                 // store it in self.text
                 if let theText =
                     NSString(data: data, encoding: NSUTF8StringEncoding) {
-                        self.text = theText
+                        self.text = theText as String
                 }
             }
             

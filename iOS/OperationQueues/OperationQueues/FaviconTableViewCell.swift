@@ -26,7 +26,7 @@ didSet {
     var request = NSURLRequest(URL: self.url!)
         
     // Display this text
-    self.textLabel.text = self.url?.host
+    self.textLabel?.text = self.url?.host
         
     // Fire off the request, and give it a completion handler
     // plus a queue to run on
@@ -43,7 +43,7 @@ didSet {
             NSOperationQueue.mainQueue().addOperationWithBlock() {
                     
                 // Give the image view the loaded image
-                self.imageView.image = image
+                self.imageView?.image = image
                     
                 // The image view has probably changed size because of
                 // the new image, so we need to re-layout the cell.

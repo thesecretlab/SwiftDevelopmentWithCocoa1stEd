@@ -36,9 +36,9 @@ override func viewDidAppear(animated: Bool) {
     self.motionManager.startDeviceMotionUpdatesToQueue(
         NSOperationQueue.mainQueue(),
         withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
-          let xString = NSString(format:"%.1f", motion.userAcceleration.x)
-          let yString = NSString(format:"%.1f", motion.userAcceleration.y)
-          let zString = NSString(format:"%.1f", motion.userAcceleration.z)
+          let xString = String(format:"%.1f", motion.userAcceleration.x)
+          let yString = String(format:"%.1f", motion.userAcceleration.y)
+          let zString = String(format:"%.1f", motion.userAcceleration.z)
                 
           self.xLabel.text = xString
           self.yLabel.text = yString
@@ -49,9 +49,9 @@ override func viewDidAppear(animated: Bool) {
           let yawDegress = motion.attitude.yaw * 180 / M_PI
           let rollDegress = motion.attitude.roll * 180 / M_PI
             
-          let pitchString = NSString(format: "%.1f", pitchDegrees)
-          let yawString = NSString(format: "%.1f", yawDegress)
-          let rollString = NSString(format: "%.1f", rollDegress)
+          let pitchString = String(format: "%.1f", pitchDegrees)
+          let yawString   = String(format: "%.1f", yawDegress)
+          let rollString  = String(format: "%.1f", rollDegress)
                 
           self.pitchLabel.text = pitchString
           self.yawLabel.text = yawString

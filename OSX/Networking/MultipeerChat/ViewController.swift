@@ -112,7 +112,7 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate,
         dispatch_async(dispatch_get_main_queue()) {
             
             if let msg = NSString(data: data, encoding: NSUTF8StringEncoding) {
-                self.updateChat(msg, fromPeer: peerID)
+                self.updateChat(msg as String, fromPeer: peerID)
             }
             
         }

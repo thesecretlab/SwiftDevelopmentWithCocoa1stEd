@@ -16,11 +16,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var numberValue : Int = 0
     // END simple_bindings_property
     
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
     }
 
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 

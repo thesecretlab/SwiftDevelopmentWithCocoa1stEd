@@ -26,8 +26,8 @@ class ViewController: UIViewController {
         printInteraction?.presentAnimated(true,
             completionHandler: {
                 (printController:UIPrintInteractionController!,
-                completed:Bool!,
-                error:NSError!) -> Void in
+                completed:Bool,
+                error:NSError?) -> Void in
         })
     }
 // END print_func

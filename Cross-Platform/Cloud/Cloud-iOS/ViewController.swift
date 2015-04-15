@@ -63,7 +63,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
         // Copy it to a temporary location
             let temporaryURL = NSURL.fileURLWithPath(NSTemporaryDirectory(),
                                                              isDirectory:true)?
-            .URLByAppendingPathComponent(fileName)
+            .URLByAppendingPathComponent(fileName!)
         
         var copyError : NSError? = nil
         
@@ -83,7 +83,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
         let destinationURL = NSFileManager.defaultManager()
             .URLForUbiquityContainerIdentifier(nil)?
             .URLByAppendingPathComponent("Documents")
-            .URLByAppendingPathComponent(fileName)
+            .URLByAppendingPathComponent(fileName!)
         
         var makeUbiquitousError : NSError? = nil
         
@@ -100,7 +100,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func documentPickerWasCancelled(controller: UIDocumentPickerViewController!)
+    func documentPickerWasCancelled(controller: UIDocumentPickerViewController)
     {
         // Nothing got selected, so just dismiss it
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -170,7 +170,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
             if let metadataItem = item as? NSMetadataItem {
                 let url =
                     metadataItem
-                        .valueForAttribute(NSMetadataItemURLKey) as NSURL
+                        .valueForAttribute(NSMetadataItemURLKey) as! NSURL
                 files.append(url)
                 
                 
@@ -184,7 +184,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
     // END ios_metadata_query_updated
     
     // BEGIN ios_ubiq_kvm_textfield_return
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.textField.resignFirstResponder()
         NSUbiquitousKeyValueStore.defaultStore(
         ).setString(self.textField.text,

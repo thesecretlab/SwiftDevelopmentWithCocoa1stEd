@@ -13,18 +13,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
 
 
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
     }
 
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 
 // ------
 // app nap occlusion
 // BEGIN app_nap_occlusion
-    func applicationDidChangeOcclusionState(notification: NSNotification!)
+    func applicationDidChangeOcclusionState(notification: NSNotification)
     {
         if (NSApp.occlusionState & NSApplicationOcclusionState.Visible != nil)
         {

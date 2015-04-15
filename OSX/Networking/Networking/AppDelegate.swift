@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var imageView: NSImageView!
     
     // BEGIN using_nsurlsession
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         
         // PlaceKitten.com URLs work like this:
         // http://placekitten.com/<width>/<height>

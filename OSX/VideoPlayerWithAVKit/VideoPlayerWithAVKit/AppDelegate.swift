@@ -22,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 // ------
 // importing AVKit
 // BEGIN avkit_setup
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         let contentURL = NSBundle.mainBundle().URLForResource("TestVideo",
             withExtension: "m4v")
         
@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 // END avkit_setup
 
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
 

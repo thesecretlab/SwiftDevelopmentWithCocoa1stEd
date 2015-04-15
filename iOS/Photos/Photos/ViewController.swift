@@ -75,15 +75,15 @@ class ViewController: UIViewController,
 // ------
 // picker delegate methods
 // BEGIN picker_delegates
-    func imagePickerController(picker: UIImagePickerController!,
-                didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!)
+    func imagePickerController(picker: UIImagePickerController,
+                didFinishPickingMediaWithInfo info: [NSObject : AnyObject])
     {
-        let image: UIImage =
-                    info[UIImagePickerControllerOriginalImage] as UIImage
+        let image =
+                    info[UIImagePickerControllerOriginalImage] as! UIImage
         self.imageView.image = image
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
-    func imagePickerControllerDidCancel(picker: UIImagePickerController!) {
+    func imagePickerControllerDidCancel(picker: UIImagePickerController){
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
 // END picker_delegates

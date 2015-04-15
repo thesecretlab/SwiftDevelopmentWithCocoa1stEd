@@ -55,7 +55,7 @@ override func collectionView(collectionView: UICollectionView,
 {
     let cell =
         collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier,
-                            forIndexPath: indexPath) as UICollectionViewCell
+                            forIndexPath: indexPath) as! UICollectionViewCell
         
     if let gridCell = cell as? GridCell {
         gridCell.label.text = String(self.numbers[indexPath.row])

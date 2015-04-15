@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // BEGIN scene_background_color
-        let sceneView = self.view as SCNView
+        let sceneView = self.view as! SCNView
         sceneView.backgroundColor = UIColor.grayColor()                
         // END scene_background_color
 
@@ -300,10 +300,10 @@ class ViewController: UIViewController {
         if tapRecognizer.state == UIGestureRecognizerState.Ended {
         
             // Find the object that was tapped
-            let sceneView = self.view as SCNView
+            let sceneView = self.view as! SCNView
             let hits = sceneView.hitTest(tapRecognizer.locationInView(
                                          tapRecognizer.view),
-                                         options: nil) as [SCNHitTestResult]
+                                         options: nil) as! [SCNHitTestResult]
         
             // Make all selected items highlight
             for hit in hits {

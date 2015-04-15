@@ -12,11 +12,11 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window : UIWindow!
-    var secondWindow : UIWindow!
+    var window : UIWindow?
+    var secondWindow : UIWindow?
     
-    func application(application: UIApplication!,
-        didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    func application(application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
         
         // Register to be notified of when screens connect or disconnect
         var notificationCenter = NSNotificationCenter.defaultCenter()
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // We're in the middle of starting up. If the system already has
         // multiple screens, set up the second one!
         if UIScreen.screens().count >= 2 {
-            var secondScreen = UIScreen.screens()[1] as UIScreen
+            var secondScreen = UIScreen.screens()[1] as! UIScreen
             self.setupScreen(secondScreen)
         }
         
@@ -51,17 +51,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Create a window to display on this screen
         self.secondWindow = UIWindow(frame: screen.bounds)
-        self.secondWindow.screen = screen
-        self.secondWindow.hidden = false
+        self.secondWindow!.screen = screen
+        self.secondWindow!.hidden = false
         
         // Create a view controller to show in the window
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         var viewController = storyboard
             .instantiateViewControllerWithIdentifier("secondWindowVC")
-                as UIViewController
+                as! UIViewController
         
         // Show the view controller in the window
-        self.secondWindow.rootViewController = viewController
+        self.secondWindow!.rootViewController = viewController
     
     }
     
@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func screenDidConnect(notification: NSNotification) {
         
         // Get the screen from the NSObject
-        var screen = notification.object as UIScreen
+        var screen = notification.object as! UIScreen
         
         // Attempt to set it up
         self.setupScreen(screen)
@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func screenDidDisconnect(notification: NSNotification) {
         
         // Get the screen from the NSObject
-        var screen = notification.object as UIScreen
+        var screen = notification.object as! UIScreen
         
         // If we have a second window, and it uses this window...
         if self.secondWindow?.screen == screen {

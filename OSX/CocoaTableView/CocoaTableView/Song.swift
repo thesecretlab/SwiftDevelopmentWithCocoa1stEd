@@ -21,7 +21,7 @@ extension Song {
     
     // BEGIN osx_tableview_durationstring
     func durationString() -> String {
-        return NSString(format: "%i:%02i", Int(self.duration) / 60,
+        return String(format: "%i:%02i", Int(self.duration) / 60,
                             Int(self.duration) % 60)
     }
     // END osx_tableview_durationstring

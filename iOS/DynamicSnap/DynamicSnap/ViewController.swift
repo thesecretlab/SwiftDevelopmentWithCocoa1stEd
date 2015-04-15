@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     @IBAction func tapped(sender: AnyObject) {
         // getting the tap location
-        let tap = sender as UITapGestureRecognizer
+        let tap = sender as! UITapGestureRecognizer
         let point = tap.locationInView(self.view)
         
         // removing the previous snapping and adding the new one

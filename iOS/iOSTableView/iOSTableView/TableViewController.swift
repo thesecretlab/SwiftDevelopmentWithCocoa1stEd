@@ -47,11 +47,11 @@ class TableViewController: UITableViewController {
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("StringCell",
-                            forIndexPath: indexPath) as UITableViewCell
+                            forIndexPath: indexPath) as! UITableViewCell
 
         let string = data[indexPath.row]
 
-        cell.textLabel.text = string
+        cell.textLabel?.text = string
 
         return cell
         

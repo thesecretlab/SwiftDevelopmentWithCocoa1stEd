@@ -33,7 +33,7 @@ override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
         let videoURL = NSBundle.mainBundle().URLForResource("TestVideo",
                                                        withExtension: "m4v")
         let videoViewController =
-                   segue.destinationViewController as AVPlayerViewController
+                   segue.destinationViewController as! AVPlayerViewController
         videoViewController.player = AVPlayer(URL: videoURL)
     }
 }

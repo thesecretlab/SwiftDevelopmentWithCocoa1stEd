@@ -16,14 +16,14 @@ class MasterViewController: UITableViewController {
     func URLForDocuments() -> NSURL {
         return NSFileManager.defaultManager()
             .URLsForDirectory(NSSearchPathDirectory.DocumentDirectory,
-                inDomains: NSSearchPathDomainMask.UserDomainMask).last as NSURL
+                inDomains: NSSearchPathDomainMask.UserDomainMask).last as! NSURL
     }
     
     func updateFileList() {
         documentURLs = NSFileManager.defaultManager()
             .contentsOfDirectoryAtURL(self.URLForDocuments(),
                 includingPropertiesForKeys: nil,
-                options: NSDirectoryEnumerationOptions(), error: nil) as [NSURL]
+                options: NSDirectoryEnumerationOptions(), error: nil) as! [NSURL]
         
         self.tableView.reloadData()
     }
@@ -45,11 +45,11 @@ class MasterViewController: UITableViewController {
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView
-            .dequeueReusableCellWithIdentifier("FileCell") as UITableViewCell
+            .dequeueReusableCellWithIdentifier("FileCell") as! UITableViewCell
         
         let URL = documentURLs[indexPath.row]
         
-        cell.textLabel.text = URL.lastPathComponent
+        cell.textLabel!.text = URL.lastPathComponent
         
         return cell
     }
@@ -74,7 +74,7 @@ class MasterViewController: UITableViewController {
         
         if segue.identifier == "showDetail" {
             let detailViewController =
-                segue.destinationViewController as DetailViewController
+                segue.destinationViewController as! DetailViewController
 
             let document = sender as? SampleDocument
             detailViewController.detailItem = document

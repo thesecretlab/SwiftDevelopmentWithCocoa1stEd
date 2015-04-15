@@ -59,7 +59,10 @@ class ViewController: UIViewController,CBPeripheralManagerDelegate{
                 identifier: "Awesome painting");
             
             var beaconData = beaconRegion.peripheralDataWithMeasuredPower(nil)
-            self.bluetoothManager?.startAdvertising(beaconData)
+            
+            
+            self.bluetoothManager?.startAdvertising(beaconData as [NSObject:AnyObject])
+            
         }
     }
 // END ibeacon_config

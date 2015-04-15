@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSNetServiceDelegate,
     let browser = NSNetServiceBrowser()
     var services = [NSNetService]()
 
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         
         browser.delegate = self;
         
@@ -53,7 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSNetServiceDelegate,
     }
     
     func netService(sender: NSNetService,
-                            didNotResolve errorDict: NSDictionary) {
+        didNotResolve errorDict: [NSObject:AnyObject]) {
         println("Couldn't resolve address for service \(sender), \(errorDict)")
     }
 }

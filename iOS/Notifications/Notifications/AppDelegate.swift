@@ -12,7 +12,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window : UIWindow!
+    var window : UIWindow?
     
     /*
     // BEGIN remote_notification_on_start_osx
@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     
-    func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
         
         /*
         // BEGIN notification_settings_register
@@ -141,7 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // BEGIN notification_settings_register_with_actions
         // Create an NSSet containing a single object (the category 
         // we defined earlier)
-        var notificationCategories = NSSet(object: notificationCategory)
+        var notificationCategories = Set([notificationCategory])
         
         // Use that NSSet to create the notification settings
         let notificationSettingsWithAction =
@@ -168,10 +168,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // BEGIN local_notification_receive_action
     // This function may be called when the app is in the background, if the 
     // action's activation mode was Background
-    func application(application: UIApplication!,
-        handleActionWithIdentifier identifier: String!,
-        forLocalNotification notification: UILocalNotification!,
-        completionHandler: (() -> Void)!) {
+    func application(application: UIApplication,
+        handleActionWithIdentifier identifier: String?,
+        forLocalNotification notification: UILocalNotification,
+        completionHandler: (() -> Void)) {
             
         // Called when the user selects an action from a local notification
         
@@ -186,8 +186,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     // BEGIN local_notification_receive_no_action
-    func application(application: UIApplication!,
-        didReceiveLocalNotification notification: UILocalNotification!) {
+    func application(application: UIApplication,
+        didReceiveLocalNotification notification: UILocalNotification) {
         // Called when the user taps on a local notification (without selecting 
         // an action), or if a local notification arrives while using the app 
         // (in which case the notification isn't shown to the user)
@@ -197,8 +197,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // END local_notification_receive_no_action
     
     // BEGIN remote_notification_register_success
-    func application(application: UIApplication!,
-        didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData!) {
+    func application(application: UIApplication,
+        didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         // Called when we've successfully registered for remote notifications.
         
         // Send the deviceToken to a server you control; it uses that token
@@ -207,8 +207,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // END remote_notification_register_success
     
     // BEGIN remote_notification_register_fail
-    func application(application: UIApplication!,
-        didFailToRegisterForRemoteNotificationsWithError error: NSError!) {
+    func application(application: UIApplication,
+        didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         // Called when registering for remote notifications
         // doesn't work for some reason
         println("Failed to register for notifications! \(error)")
@@ -216,8 +216,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // END remote_notification_register_fail
     
     // BEGIN remote_notification_receive_no_action
-    func application(application: UIApplication!,
-        didReceiveRemoteNotification userInfo: NSDictionary!) {
+    func application(application: UIApplication,
+        didReceiveRemoteNotification userInfo: [NSObject:AnyObject]) {
         // Called when a remote notification arrives, but no action was selected
         // or the notification came in while using the app
             
@@ -226,10 +226,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // END remote_notification_receive_no_action
     
     // BEGIN remote_notification_receive_action
-    func application(application: UIApplication!,
-        handleActionWithIdentifier identifier: String!,
-        forRemoteNotification userInfo: NSDictionary!,
-        completionHandler: (() -> Void)!) {
+    func application(application: UIApplication,
+        handleActionWithIdentifier identifier: String?,
+        forRemoteNotification userInfo: [NSObject:AnyObject],
+        completionHandler: (() -> Void)) {
         // Called when a remote notification arrives,
         // and the user selected an action
     }

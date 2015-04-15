@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 // END share-image
     
 // BEGIN text-field-dismissing
-func textFieldShouldReturn(textField: UITextField!) -> Bool {
+func textFieldShouldReturn(textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return false
 }

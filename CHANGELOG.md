@@ -1,4 +1,4 @@
-There are several changes from Xcode 6.2 to 6.3 that affect the Swift language, as well as its standard library. We've updated the code in this repository to bring it up to date, but this means that the code in the book doesn't line up with the code in the repo.
+There are several changes in Xcode 6.3 that affect the Swift language, as well as its standard library. We've updated the code in this repository to bring it up to date, but this means that the code in the book doesn't line up with the code in the repo.
 
 The main changes are:
 

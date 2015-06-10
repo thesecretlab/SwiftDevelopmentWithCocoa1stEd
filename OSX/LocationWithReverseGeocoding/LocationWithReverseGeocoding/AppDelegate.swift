@@ -75,7 +75,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,CLLocationManagerDelegate {
                         placemark.administrativeArea,
                         placemark.country)
                     
-                    self.addressLabel.stringValue = address
+                    self.addressLabel.stringValue = address as String
                 }
                 else
                 {
